@@ -1,0 +1,63 @@
+function ocultarMostrarCheckbox(campoCheckbox,arrayDisplay,arrayCampos) {	
+	if(campoCheckbox.checked) {	
+		mostrarCampos(arrayDisplay);				
+	} else {
+		ocultarCampos(arrayDisplay);
+		limpiarCampos(arrayCampos);
+	}
+}
+function ocultarMostrarUncheckedCheckbox(campoCheckbox,arrayDisplay,arrayCampos) {	
+	if(!campoCheckbox.checked) {	
+		mostrarCampos(arrayDisplay);				
+	} else {
+		ocultarCampos(arrayDisplay);
+		limpiarCampos(arrayCampos);
+	}
+}
+
+function ocultarMostrarSelect(campoSelect,arrayValoresSelect,arrayDisplay,arrayCampos) {	
+	if(campoSelect != null && campoSelect.value != null) {
+		var mostrar = false;
+		for(i in arrayValoresSelect) {
+			if(campoSelect.value == arrayValoresSelect[i]) {
+				mostrar = true;
+				break;
+			} else {
+				mostrar = false;
+			}
+		}
+		if(mostrar) {
+			mostrarCampos(arrayDisplay);
+		} else {
+			ocultarCampos(arrayDisplay);
+			limpiarCampos(arrayCampos);
+		}
+	} else {
+		ocultarCampos(arrayDisplay);
+		limpiarCampos(arrayCampos);
+	}
+}
+function mostrarCampos(arrayDisplay) {
+	for (i in arrayDisplay) {
+		document.getElementById(arrayDisplay[i]).style.display = '';
+   	}	
+}
+function ocultarCampos(arrayDisplay) {
+	for (i in arrayDisplay) {
+		document.getElementById(arrayDisplay[i]).style.display = 'none';
+    }
+}
+function limpiarCampos(arrayCampos) {
+	if(arrayCampos != null) {
+		for (i in arrayCampos) {
+			var campo = document.getElementById(arrayCampos[i]);
+			if(campo.type == 'text') {	
+				campo.value = '';
+			} else if(campo.type == 'select-one') {
+				campo.selectedIndex = 0;
+			} else if(campo.type == 'checkbox') {
+				campo.checked = false;
+			} 			
+	   	}	
+	}
+}

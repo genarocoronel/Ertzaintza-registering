@@ -1,0 +1,16 @@
+# Dot files
+.*
+!.editorconfig
+!.travis*
+!.appveyor*
+!.git*
+!.readthedocs.yaml
+!.pre-commit-config.yaml
+
+# Python
+/dist
+/build
+*.pyc
+*.pyo
+*.egg*
+*.so

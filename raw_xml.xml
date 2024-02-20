@@ -1,0 +1,72 @@
+<soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap-env:Body>
+    <ns0:envioFicheroXML xmlns:ns0="https://ws.negocio.registroHostelero.a19.gvdi.com">
+      <ns0:cabecera>
+        <aplicacion>Sistema de comunicaciones para alojamientos</aplicacion>
+        <codigoArrendador>B76345879</codigoArrendador>
+        <tipoComunicacion>PV</tipoComunicacion>
+      </ns0:cabecera>
+      <ns0:solicitud>&lt;![CDATA[&lt;alt:peticion xmlns:alt="http://www.servicios.ertzaintza.eus/Ertzaintza/ALOJADOS/A19/comunicacionPV"&gt;
+  &lt;solicitud&gt;
+    &lt;codigoEstablecimiento&gt;480354&lt;/codigoEstablecimiento&gt;
+    &lt;comunicacion&gt;
+      &lt;contrato&gt;
+        &lt;referencia&gt;string&lt;/referencia&gt;
+        &lt;fechaContrato&gt;2022-09-29&lt;/fechaContrato&gt;
+        &lt;fechaEntrada&gt;2022-09-19T01:18:33&lt;/fechaEntrada&gt;
+        &lt;fechaSalida&gt;2022-09-21T19:27:14+02:00&lt;/fechaSalida&gt;
+        &lt;numPersonas&gt;2&lt;/numPersonas&gt;
+        &lt;numHabitaciones&gt;1&lt;/numHabitaciones&gt;
+        &lt;internet&gt;false&lt;/internet&gt;
+        &lt;pago&gt;
+          &lt;tipoPago&gt;EFECT&lt;/tipoPago&gt;
+          &lt;fechaPago&gt;2022-09-29&lt;/fechaPago&gt;
+        &lt;/pago&gt;
+      &lt;/contrato&gt;
+      &lt;persona&gt;
+        &lt;rol&gt;VI&lt;/rol&gt;
+        &lt;nombre&gt;Juan&lt;/nombre&gt;
+        &lt;apellido1&gt;Garcia&lt;/apellido1&gt;
+        &lt;apellido2&gt;Garcia&lt;/apellido2&gt;
+        &lt;tipoDocumento&gt;NIF&lt;/tipoDocumento&gt;
+        &lt;numeroDocumento&gt;000000000T&lt;/numeroDocumento&gt;
+        &lt;soporteDocumento&gt;999999999&lt;/soporteDocumento&gt;
+        &lt;fechaNacimiento&gt;1999-01-01&lt;/fechaNacimiento&gt;
+        &lt;nacionalidad&gt;ESP&lt;/nacionalidad&gt;
+        &lt;sexo&gt;H&lt;/sexo&gt;
+        &lt;direccion&gt;
+          &lt;direccion&gt;C/Serrano 127&lt;/direccion&gt;
+          &lt;direccionComplementaria&gt;Portal A. 2B&lt;/direccionComplementaria&gt;
+          &lt;codigoMunicipio&gt;28079&lt;/codigoMunicipio&gt;
+          &lt;codigoPostal&gt;28001&lt;/codigoPostal&gt;
+          &lt;pais&gt;ESP&lt;/pais&gt;
+        &lt;/direccion&gt;
+        &lt;telefono&gt;666666666&lt;/telefono&gt;
+        &lt;correo&gt;juangarcia@correo.es&lt;/correo&gt;
+      &lt;/persona&gt;
+      &lt;persona&gt;
+        &lt;rol&gt;VI&lt;/rol&gt;
+        &lt;nombre&gt;Pedro&lt;/nombre&gt;
+        &lt;apellido1&gt;Garcia&lt;/apellido1&gt;
+        &lt;apellido2&gt;Fernandez&lt;/apellido2&gt;
+        &lt;fechaNacimiento&gt;2018-01-01&lt;/fechaNacimiento&gt;
+        &lt;nacionalidad&gt;ESP&lt;/nacionalidad&gt;
+        &lt;sexo&gt;H&lt;/sexo&gt;
+        &lt;direccion&gt;
+          &lt;direccion&gt;C/Serrano 127&lt;/direccion&gt;
+          &lt;direccionComplementaria&gt;Portal A. 2B&lt;/direccionComplementaria&gt;
+          &lt;codigoMunicipio&gt;28079&lt;/codigoMunicipio&gt;
+          &lt;codigoPostal&gt;28001&lt;/codigoPostal&gt;
+          &lt;pais&gt;ESP&lt;/pais&gt;
+        &lt;/direccion&gt;
+        &lt;telefono&gt;666666666&lt;/telefono&gt;
+        &lt;correo&gt;juangarcia@correo.es&lt;/correo&gt;
+        &lt;parentesco&gt;12&lt;/parentesco&gt;
+      &lt;/persona&gt;
+    &lt;/comunicacion&gt;
+  &lt;/solicitud&gt;
+&lt;/alt:peticion&gt;]]&gt;
+</ns0:solicitud>
+    </ns0:envioFicheroXML>
+  </soap-env:Body>
+</soap-env:Envelope>

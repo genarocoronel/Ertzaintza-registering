@@ -1,0 +1,1 @@
+pass certificado:1

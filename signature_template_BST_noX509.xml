@@ -1,0 +1,55 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <soapenv:Header xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+        <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+                       xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+            <wsse:BinarySecurityToken
+                    xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+                    EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary"
+                    ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3"
+                    xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+                    wsu:Id="X509Certificate">
+            </wsse:BinarySecurityToken>
+            <Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="Signature-2117099736">
+                <SignedInfo xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+                    <CanonicalizationMethod Algorithm=
+                                                    "http://www.w3.org/TR/2001/REC-xml-c14n-20010315">
+                        <c14n:InclusiveNamespaces xmlns:c14n="http://www.w3.org/2001/10/xml-exc-c14n#" PrefixList="ds wsu xenc"/>
+                    </CanonicalizationMethod>
+                    <SignatureMethod Algorithm=
+                                             "http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+                    <Reference URI="#idBody">
+                        <Transforms>
+                            <Transform Algorithm=
+                                               "http://www.w3.org/2000/09/xmldsig#enveloped-signature">
+                                    <c14n:InclusiveNamespaces xmlns:c14n="http://www.w3.org/2001/10/xml-exc-c14n#" PrefixList="wsu"/>
+                            </Transform>
+                        </Transforms>
+                        <DigestMethod Algorithm=
+                                              "http://www.w3.org/2000/09/xmldsig#sha1"/>
+                        <DigestValue></DigestValue>
+                    </Reference>
+                    <Reference URI="#idTimestampToken">
+                        <Transforms>
+                            <Transform Algorithm=
+                                               "http://www.w3.org/2000/09/xmldsig#enveloped-signature">
+                                <c14n:InclusiveNamespaces xmlns:c14n="http://www.w3.org/2001/10/xml-exc-c14n#" PrefixList="wsu"/>
+                            </Transform>
+                        </Transforms>
+                        <DigestMethod Algorithm=
+                                              "http://www.w3.org/2000/09/xmldsig#sha1"/>
+                        <DigestValue></DigestValue>
+                    </Reference>
+                </SignedInfo>
+                <SignatureValue/>
+                <KeyInfo>
+                    <wsse:SecurityTokenReference>
+                        <wsse:Reference URI="#idBody"
+                                        ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509"/>
+                    </wsse:SecurityTokenReference>
+                    <KeyValue/>
+                </KeyInfo>
+            </Signature>
+        </wsse:Security>
+    </soapenv:Header>
+</soapenv:Envelope>

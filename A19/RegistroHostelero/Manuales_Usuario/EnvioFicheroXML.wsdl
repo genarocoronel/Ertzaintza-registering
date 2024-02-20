@@ -1,0 +1,196 @@
+<WL5G3N2:definitions xmlns:WL5G3N0="http://schemas.xmlsoap.org/ws/2004/09/policy"
+ xmlns:WL5G3N1="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+ xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N3="https://ws.negocio.registroHostelero.a19.gvdi.com"
+ xmlns:WL5G3N4="http://schemas.xmlsoap.org/wsdl/soap/" name="JwsService"
+ targetNamespace="https://ws.negocio.registroHostelero.a19.gvdi.com">
+ <WL5G3N0:Policy WL5G3N1:Id="JwsServiceSoapBindingQSPort_Fault_Policy">
+  <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+   <sp:Body/>
+   <sp:Header Name="Timestamp" Namespace="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"/>
+  </sp:SignedParts>
+  <sp:SignedElements xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+  <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+  <sp:EncryptedElements xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+ </WL5G3N0:Policy>
+ <WL5G3N0:Policy WL5G3N1:Id="wss10_x509_token_with_message_protection_service_policy">
+  <sp:AsymmetricBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+   <wsp:Policy xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+    <sp:InitiatorToken>
+     <wsp:Policy>
+      <sp:X509Token sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/Always">
+       <wsp:Policy>
+        <sp:WssX509V3Token10/>
+       </wsp:Policy>
+      </sp:X509Token>
+     </wsp:Policy>
+    </sp:InitiatorToken>
+    <sp:RecipientToken>
+     <wsp:Policy>
+      <sp:X509Token sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/Always">
+       <wsp:Policy>
+        <sp:WssX509V3Token10/>
+       </wsp:Policy>
+      </sp:X509Token>
+     </wsp:Policy>
+    </sp:RecipientToken>
+    <sp:AlgorithmSuite>
+     <wsp:Policy>
+      <sp:Basic128/>
+     </wsp:Policy>
+    </sp:AlgorithmSuite>
+    <sp:Layout>
+     <wsp:Policy>
+      <sp:Lax/>
+     </wsp:Policy>
+    </sp:Layout>
+    <sp:IncludeTimestamp/>
+    <sp:OnlySignEntireHeadersAndBody/>
+    <sp:ProtectTokens/>
+   </wsp:Policy>
+  </sp:AsymmetricBinding>
+  <sp:Wss10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+   <wsp:Policy xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+    <sp:MustSupportRefKeyIdentifier/>
+    <sp:MustSupportRefIssuerSerial/>
+   </wsp:Policy>
+  </sp:Wss10>
+ </WL5G3N0:Policy>
+ <WL5G3N0:Policy WL5G3N1:Id="JwsServiceSoapBindingQSPort_Input_Policy">
+  <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+   <sp:Body/>
+   <sp:Header Name="Timestamp" Namespace="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"/>
+  </sp:SignedParts>
+  <sp:SignedElements xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+  <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+  <sp:EncryptedElements xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+ </WL5G3N0:Policy>
+ <WL5G3N0:Policy WL5G3N1:Id="JwsServiceSoapBindingQSPort_Output_Policy">
+  <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+   <sp:Body/>
+   <sp:Header Name="Timestamp" Namespace="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"/>
+  </sp:SignedParts>
+  <sp:SignedElements xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+  <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+  <sp:EncryptedElements xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+ </WL5G3N0:Policy>
+ <WL5G3N2:types>
+  <xsd:schema xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/"
+   xmlns:WL5G3N1="https://ws.negocio.registroHostelero.a19.gvdi.com"
+   xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns0="https://ws.negocio.registroHostelero.a19.gvdi.com"
+   xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="https://ws.negocio.registroHostelero.a19.gvdi.com"
+   xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata"
+   xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsp="http://www.w3.org/ns/ws-policy"
+   xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy"
+   xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="https://ws.negocio.registroHostelero.a19.gvdi.com">
+   <xsd:complexType name="envioFicheroXML">
+    <xsd:sequence>
+     <xsd:element form="qualified" name="cabecera" type="ns0:cabecera"/>
+     <xsd:element form="qualified" name="solicitud" type="xsd:string"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="envioFicheroXMLResponse">
+    <xsd:sequence>
+     <xsd:element form="qualified" name="return" type="ns0:comunicacionResponse"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="Exception">
+    <xsd:sequence>
+     <xsd:element minOccurs="0" name="message" type="xsd:string"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="cabecera">
+    <xsd:sequence>
+     <xsd:element minOccurs="0" name="aplicacion" type="xsd:string"/>
+     <xsd:element minOccurs="0" name="codigoArrendador" type="xsd:string"/>
+     <xsd:element minOccurs="0" name="tipoComunicacion" type="xsd:string"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="comunicacionResponse">
+    <xsd:sequence>
+     <xsd:element minOccurs="0" name="respuesta" type="ns0:respuesta"/>
+     <xsd:element minOccurs="0" name="resultado" type="ns0:resultado"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="respuesta">
+    <xsd:sequence>
+     <xsd:element maxOccurs="unbounded" minOccurs="0" name="error" nillable="true" type="ns0:error"/>
+     <xsd:element minOccurs="0" name="peticion" type="xsd:string"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="error">
+    <xsd:sequence>
+     <xsd:element minOccurs="0" name="codigo" type="xsd:string"/>
+     <xsd:element minOccurs="0" name="descripcion" type="xsd:string"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="resultado">
+    <xsd:sequence>
+     <xsd:element minOccurs="0" name="aplicacion" type="xsd:string"/>
+     <xsd:element minOccurs="0" name="codigoArrendador" type="xsd:string"/>
+     <xsd:element minOccurs="0" name="codigoEstadoComunicacion" type="xsd:string"/>
+     <xsd:element minOccurs="0" name="descEstadoComunicacion" type="xsd:string"/>
+     <xsd:element minOccurs="0" name="fechaPeticion" type="xsd:string"/>
+     <xsd:element minOccurs="0" name="fechaProcesamiento" type="xsd:string"/>
+     <xsd:element minOccurs="0" name="identificadorUsuario" type="xsd:string"/>
+     <xsd:element minOccurs="0" name="nombreUsuario" type="xsd:string"/>
+     <xsd:element minOccurs="0" name="peticion" type="xsd:string"/>
+     <xsd:element minOccurs="0" name="solicitud" type="xsd:string"/>
+     <xsd:element minOccurs="0" name="tipoComunicacion" type="xsd:string"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:element name="envioFicheroXML" type="ns0:envioFicheroXML"/>
+   <xsd:element name="envioFicheroXMLResponse" type="ns0:envioFicheroXMLResponse"/>
+   <xsd:element name="Exception" type="ns0:Exception"/>
+  </xsd:schema>
+ </WL5G3N2:types>
+ <WL5G3N2:message name="envioFicheroXML">
+  <WL5G3N2:part name="parameters" element="WL5G3N3:envioFicheroXML"/>
+ </WL5G3N2:message>
+ <WL5G3N2:message name="envioFicheroXMLResponse">
+  <WL5G3N2:part name="parameters" element="WL5G3N3:envioFicheroXMLResponse"/>
+ </WL5G3N2:message>
+ <WL5G3N2:message name="Exception">
+  <WL5G3N2:part name="fault" element="WL5G3N3:Exception"/>
+ </WL5G3N2:message>
+ <WL5G3N2:portType name="Jws">
+  <WL5G3N2:operation name="envioFicheroXML">
+   <WL5G3N2:input message="WL5G3N3:envioFicheroXML"/>
+   <WL5G3N2:output message="WL5G3N3:envioFicheroXMLResponse"/>
+   <WL5G3N2:fault name="Exception" message="WL5G3N3:Exception"/>
+  </WL5G3N2:operation>
+ </WL5G3N2:portType>
+ <WL5G3N2:binding name="JwsServiceSoapBinding" type="WL5G3N3:Jws">
+  <WL5G3N4:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+  <WL5G3N0:Policy>
+   <WL5G3N0:PolicyReference URI="#wss10_x509_token_with_message_protection_service_policy"/>
+  </WL5G3N0:Policy>
+  <WL5G3N2:operation name="envioFicheroXML">
+   <WL5G3N4:operation soapAction="https://ws.negocio.registroHostelero.a19.gvdi.com/envioFicheroXML"/>
+   <WL5G3N2:input>
+    <WL5G3N4:body use="literal"/>
+    <WL5G3N0:Policy>
+     <WL5G3N0:PolicyReference URI="#JwsServiceSoapBindingQSPort_Input_Policy"/>
+    </WL5G3N0:Policy>
+   </WL5G3N2:input>
+   <WL5G3N2:output>
+    <WL5G3N4:body use="literal"/>
+    <WL5G3N0:Policy>
+     <WL5G3N0:PolicyReference URI="#JwsServiceSoapBindingQSPort_Output_Policy"/>
+    </WL5G3N0:Policy>
+   </WL5G3N2:output>
+   <WL5G3N2:fault name="Exception">
+    <WL5G3N4:fault name="Exception" use="literal"/>
+    <WL5G3N0:Policy>
+     <WL5G3N0:PolicyReference URI="#JwsServiceSoapBindingQSPort_Fault_Policy"/>
+    </WL5G3N0:Policy>
+   </WL5G3N2:fault>
+  </WL5G3N2:operation>
+ </WL5G3N2:binding>
+ <WL5G3N2:service name="JwsServiceSoapBindingQSService">
+  <WL5G3N2:documentation>OSB Service</WL5G3N2:documentation>
+  <WL5G3N2:port name="JwsServiceSoapBindingQSPort" binding="WL5G3N3:JwsServiceSoapBinding">
+   <WL5G3N4:address location="https://servicios.pre.ertzaintza.eus/A19/registroHostelero/EnvioFicheroXML"/>
+  </WL5G3N2:port>
+ </WL5G3N2:service>
+</WL5G3N2:definitions>

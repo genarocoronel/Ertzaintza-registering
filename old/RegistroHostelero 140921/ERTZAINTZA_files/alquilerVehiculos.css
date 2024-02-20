@@ -1,0 +1,107 @@
+.tab1{
+	padding: 1em;
+}
+
+.bloque,
+.bloque_float { 
+	margin-top: 1em;
+	margin-right: 2em;
+}
+.bloque_float { 
+	float:left;
+	/*width: 43em; Para AJAX Arrendatario*/
+	width: 46em;
+}
+.texto_bloque { 
+	float: left;
+	width: 12.5em;
+}
+.texto_bloque_div {
+	float: left;
+	width: 10em;
+}
+.texto_bloque_subcalle {
+	float: left;
+	width: 6em;
+}
+
+.div_domicilio {
+	margin-left: 1em; 
+	margin-top: 1em;
+	margin-bottom: 1em; 
+	padding-left: 1em; 
+	padding-bottom: 1em; 
+	border:1px solid #999999; 
+	float:left
+}
+
+.oculto {
+	display: none;
+}
+
+.lupa {
+	display: inline-block;
+	width: 25px; 
+	height: 19px; 
+	vertical-align:top; 
+	background-image: url('/wps/images/ertzaintza/comun/icopreview.jpg'); 
+	background-repeat: no-repeat;
+	cursor: pointer
+}
+.ajax {
+	width: 16px; 
+	height: 16px; 
+	background-image: url('../images/ajax-loader.gif');
+	background-repeat: no-repeat;
+	cursor: pointer
+}
+
+.bloque_img_ajax {
+	height: 16px; 
+}
+
+.txtnegro {
+	color: black;
+}
+
+
+
+/** WIDTH ***/
+.subcalle {
+	width: 11.5em;
+}
+.tam40 {
+	width: 40em;
+}
+.tam41 {
+	width: 41em;
+}
+
+/** inicio.jsp */
+.bienvenida {
+	 width: auto !important;
+}
+
+/** FICHERO */
+.label {
+	color: #2B4592;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.columnHeader {
+   font-weight: bold;
+    text-decoration: underline;
+}
+
+/** GESTION SEDES */
+.titulo_sedes {
+	border-bottom: 2px solid #ECE9D8;
+    color: #2B4592;
+    font-size: 250%;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+/** E-MAIL ERRORES */
+.margin05 {	margin-bottom:0.5em; margin-top:1.5em; }
+.margin05 .txtnegrob { font-size: 12px; }

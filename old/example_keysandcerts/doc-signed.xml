@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<References>
+ <Book>
+  <Author>
+   <FirstName>Bruce</FirstName>
+    <LastName>Schneier</LastName>
+  </Author>
+  <Title>Applied Cryptography</Title>
+ </Book>
+ <Web>
+  <Title>XMLSec</Title>
+   <Url>http://www.aleksey.com/xmlsec/</Url>
+ </Web>
+ <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+  <SignedInfo>
+   <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+    <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+     <Reference URI="">
+      <Transforms>
+       <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+      </Transforms>
+       <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+        <DigestValue>swba3AqRyJhVhx9JM/7gwQPbYiE=</DigestValue>
+     </Reference>
+  </SignedInfo>
+  <SignatureValue>kRwMuMHEZEfSR73A4PbT6/XYWijM8sbBTujaob29QWAQbt+/9/6UlaWZOvmbljCH
+Uto1/MvyXdKWbzLEkan3os4QgjrFx+/yMRPsHK7zcGiYJPCaL2ef51w0mhLUKNCD
+bqwKznNrhVz+1NzGIzkSd5oJVRg6umzqUPxnW6AoQg0=</SignatureValue>
+  <KeyInfo>
+  </KeyInfo>
+ </Signature>
+</References>

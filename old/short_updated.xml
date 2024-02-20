@@ -1,0 +1,56 @@
+<soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap-env:Body xmlns:ns1="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+                   ns1:Id="id-e85171a2-70df-4859-85c7-f29e61438a41">
+        <ns0:envioFichero xmlns:ns0="https://ws.negocio.registroHostelero.a19.gvdi.com">
+            <ns0:fichero>
+                MXwyMDIwMDR8QkxBSSBCTEFJIEFURVJQRVRYRUEgQlNTMDAwMjl8MjAyMzEyMDJ8MDE0MXwxfAoyfHwyMDQ0MTczMTIwNnxYfDIwMjMwNDAyfENPUk9ORUx8TUFOUklRVUVafEdFTkFSTyBFWkVRVUlFTHxNfDE5ODYwNDAyfEFSR0VOVElOQXwyMDIzMTIwMQ==
+            </ns0:fichero>
+            <ns0:language>es</ns0:language>
+            <ns0:nombreFichero>202004.txt</ns0:nombreFichero>
+            <ns0:cif>B20805578</ns0:cif>
+        </ns0:envioFichero>
+    </soap-env:Body>
+    <soap-env:Header>
+        <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+                       soap-env:mustUnderstand="1">
+            <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="Signature-2117099736">
+                <ds:SignedInfo>
+                    <ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+                    <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+                    <ds:Reference URI="#id-e85171a2-70df-4859-85c7-f29e61438a41">
+                        <ds:Transforms>
+                            <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                        </ds:Transforms>
+                        <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+                        <ds:DigestValue/>
+                    </ds:Reference>
+                    <ds:Reference URI="#id-5a41edef-50bd-1159-7432-ba5a8edf6743">
+                        <ds:Transforms>
+                            <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                        </ds:Transforms>
+                        <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+                        <ds:DigestValue/>
+                    </ds:Reference>
+                </ds:SignedInfo>
+                <ds:SignatureValue/>
+                <ds:KeyInfo>
+                    <ds:KeyValue/>
+                </ds:KeyInfo>
+            </ds:Signature>
+            <wsse:UsernameToken>
+                <wsse:Username>202004</wsse:Username>
+                <wsse:Password
+                        Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">
+                    lkdKJ93s
+                </wsse:Password>
+            </wsse:UsernameToken>
+            <wsu:Timestamp
+                    xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+                    wsu:id="id-5a41edef-50bd-1159-7432-ba5a8edf6743">
+                <wsu:Created>2023-12-23T07:18:04.68Z</wsu:Created>
+                <wsu:Expires>2023-12-23T07:23:04.68Z</wsu:Expires>
+                <wsu:Nonce>vJkmiqzf2SqSbzvoZK0Ovw==</wsu:Nonce>
+            </wsu:Timestamp>
+        </wsse:Security>
+    </soap-env:Header>
+</soap-env:Envelope>

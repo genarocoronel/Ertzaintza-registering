@@ -1,0 +1,6 @@
+[submodule "src/zeep"]
+	path = src/zeep
+	url = https://github.com/Lucioric2000/python-zeep.git
+[submodule "src/python-xmlsec"]
+	path = src/python-xmlsec
+	url = https://github.com/xmlsec/python-xmlsec

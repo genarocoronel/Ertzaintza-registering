@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WL5G3N0:definitions name="JwsService" targetNamespace="https://ws.negocio.registroHostelero.a19.gvdi.com" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="https://ws.negocio.registroHostelero.a19.gvdi.com" xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap/">
+  <WL5G3N0:types>
+    <xsd:schema targetNamespace="https://ws.negocio.registroHostelero.a19.gvdi.com" xmlns:ns0="https://ws.negocio.registroHostelero.a19.gvdi.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="https://ws.negocio.registroHostelero.a19.gvdi.com" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:complexType name="envioFicheroXML">
+        <xsd:sequence>
+          <xsd:element form="qualified" name="cabecera" type="ns0:cabecera"/>
+          <xsd:element form="qualified" name="solicitud" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="envioFicheroXMLResponse">
+        <xsd:sequence>
+          <xsd:element form="qualified" name="return" type="ns0:comunicacionResponse"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Exception">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="message" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="cabecera">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="aplicacion" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="codigoArrendador" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="tipoComunicacion" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="comunicacionResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="respuesta" type="ns0:respuesta"/>
+          <xsd:element minOccurs="0" name="resultado" type="ns0:resultado"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="respuesta">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="error" nillable="true" type="ns0:error"/>
+          <xsd:element minOccurs="0" name="peticion" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="error">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="codigo" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="descripcion" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="resultado">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="aplicacion" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="codigoArrendador" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="codigoEstadoComunicacion" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="descEstadoComunicacion" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="fechaPeticion" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="fechaProcesamiento" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="identificadorUsuario" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="nombreUsuario" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="peticion" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="solicitud" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="tipoComunicacion" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="envioFicheroXML" type="ns0:envioFicheroXML"/>
+      <xsd:element name="envioFicheroXMLResponse" type="ns0:envioFicheroXMLResponse"/>
+      <xsd:element name="Exception" type="ns0:Exception"/>
+    </xsd:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="Exception">
+    <WL5G3N0:part element="WL5G3N1:Exception" name="fault"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="envioFicheroXML">
+    <WL5G3N0:part element="WL5G3N1:envioFicheroXML" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="envioFicheroXMLResponse">
+    <WL5G3N0:part element="WL5G3N1:envioFicheroXMLResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="Jws">
+    <WL5G3N0:operation name="envioFicheroXML">
+      <WL5G3N0:input message="WL5G3N1:envioFicheroXML"/>
+      <WL5G3N0:output message="WL5G3N1:envioFicheroXMLResponse"/>
+      <WL5G3N0:fault message="WL5G3N1:Exception" name="Exception"/>
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="JwsServiceSoapBinding" type="WL5G3N1:Jws">
+    <WL5G3N2:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <WL5G3N0:operation name="envioFicheroXML">
+      <WL5G3N2:operation soapAction="https://ws.negocio.registroHostelero.a19.gvdi.com/envioFicheroXML"/>
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:output>
+      <WL5G3N0:fault name="Exception">
+        <WL5G3N2:fault name="Exception" use="literal"/>
+      </WL5G3N0:fault>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="JwsServiceSoapBindingQSService">
+    <WL5G3N0:documentation>OSB Service</WL5G3N0:documentation>
+    <WL5G3N0:port binding="WL5G3N1:JwsServiceSoapBinding" name="JwsServiceSoapBindingQSPort">
+      <WL5G3N2:address location="https://obuscpre.ejhsgvdi.net:7003/Ertzaintza/ALOJADOS/A19/EnvioFicheroXML"/>
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>

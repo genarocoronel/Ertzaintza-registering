@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap-env:Header><wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">https://servicios.pre.ertzaintza.eus/A19/registroHostelero/EnvioFicheroXML</wsa:Action><wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:370e813a-4038-4559-9b11-5d9cc453ebc8</wsa:MessageID><wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">https://servicios.pre.ertzaintza.eus/A19/registroHostelero/EnvioFicheroXML</wsa:To><wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+            <Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="Signature-2117099736">
+                <SignedInfo>
+                    <CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+                    </CanonicalizationMethod>
+                    <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+                    <Reference URI="#idBody">
+                        <Transforms>
+                            <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+                            </Transform>
+                        </Transforms>
+                        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+                        <DigestValue>OGVkNbPqtOr7G37uglKNTscmLZ8=</DigestValue>
+                    </Reference>
+                    <Reference URI="#idTimestampToken">
+                        <Transforms>
+                            <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+                            </Transform>
+                        </Transforms>
+                        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+                        <DigestValue>QtCTXlFDejde/PxZ69CMy4Y93Ec=</DigestValue>
+                    </Reference>
+                </SignedInfo>
+                <SignatureValue>VUlNaHPYjUtHNy+ILv0rdrfSlvEjCK75dCg2ZMdK4d+s4chG30NUOX6yZbDQhM6w
+gGjSDGJ+1rLiKjKNXzGY6w55I88QwegvNCzv8W+XNcaxFfl4aC4aTgPB9OQY4+Av
+zzCw6tOA0JMsmw1h44oN3Et9TfXxkk3pfTu8JQbPylaeBXtNRXQTYGoSOA4UEOxz
+QIM/8xVCQorrooq0Lht3NdRIHuqGtHAjQi2nFFllZ01i10Pkr8D+1oHyWVA6BNu0
+y2GG/hahdIfcIQw9IEhcISIKQkPl50b/FYBZA3dFF5GbXSeJ7ReIWL3IkPtv4hPf
+Pobzgb0155FOVc1BHEdP6Q==</SignatureValue>
+                <KeyInfo>
+                    <wsse:SecurityTokenReference>
+                        <wsse:Reference URI="#idBody" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509"/>
+                    </wsse:SecurityTokenReference>
+                    <KeyValue>
+<RSAKeyValue>
+<Modulus>
+yw2q0xaAp5S6WPPtxD7glAwPRvAFuxXORwdVKBSS8ftGCZvpjZRoSIs2pecssum+
+CEaeBURoV2bEHpOgruOm67g7Fi3WoTHA4ZgIBrJxYXwZuOPuqFzPrwpsMC4ifkym
+QlPQChpXkRwVhXsEFgyzvgDS6GCFWc/wo8p9miM79Vmvzz5ocJ9DPIh5tVFfyd4E
+Mpcqq5bQT8dYzi2gv3pz94p3WqtELw5Nxx2lnoJ730uwB3m93xdVJZRqzK9R2ifF
+iPQVbauRM8adu+QOV8gxfP8vB5uz9lwOxtzCLLHfkdHFBHU+I733uojYCK3aBf5b
+fcVrXx3dR32GCnkEEUeOMQ==
+</Modulus>
+<Exponent>
+AQAB
+</Exponent>
+</RSAKeyValue>
+</KeyValue>
+                </KeyInfo>
+            </Signature>
+        <wsse:UsernameToken><wsse:Username>a19preempresa</wsse:Username><wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">TA2m4jMgh6pZKPiK616yKF3CHbs=</wsse:Password><wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">35UjbN0YcPAd2HrGJBGopA==</wsse:Nonce><wsu:Created xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">2024-02-12T07:50:34+00:00</wsu:Created></wsse:UsernameToken><wsu:Timestamp xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="idTimestampToken"><wsu:Created>2024-02-12T01:50:34Z</wsu:Created><wsu:Expires>2024-02-12T18:30:34Z</wsu:Expires></wsu:Timestamp></wsse:Security>
+    </soap-env:Header>
+  <soap-env:Body xmlns:ns1="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" ns1:Id="idBody">
+    <ns0:envioFicheroXML xmlns:ns0="https://ws.negocio.registroHostelero.a19.gvdi.com">
+      <ns0:cabecera>
+        <aplicacion>Sistema de comunicaciones para alojamientos</aplicacion>
+        <codigoArrendador>B76345879</codigoArrendador>
+        <tipoComunicacion>PV</tipoComunicacion>
+      </ns0:cabecera>
+      <ns0:solicitud>&lt;![CDATA[&lt;alt:peticion xmlns:alt="http://www.servicios.ertzaintza.eus/Ertzaintza/ALOJADOS/A19/comunicacionPV"&gt;
+  &lt;solicitud&gt;
+    &lt;codigoEstablecimiento&gt;480354&lt;/codigoEstablecimiento&gt;
+    &lt;comunicacion&gt;
+      &lt;contrato&gt;
+        &lt;referencia&gt;string&lt;/referencia&gt;
+        &lt;fechaContrato&gt;2022-09-29&lt;/fechaContrato&gt;
+        &lt;fechaEntrada&gt;2022-09-19T01:18:33&lt;/fechaEntrada&gt;
+        &lt;fechaSalida&gt;2022-09-21T19:27:14+02:00&lt;/fechaSalida&gt;
+        &lt;numPersonas&gt;2&lt;/numPersonas&gt;
+        &lt;numHabitaciones&gt;1&lt;/numHabitaciones&gt;
+        &lt;internet&gt;false&lt;/internet&gt;
+        &lt;pago&gt;
+          &lt;tipoPago&gt;EFECT&lt;/tipoPago&gt;
+          &lt;fechaPago&gt;2022-09-29&lt;/fechaPago&gt;
+        &lt;/pago&gt;
+      &lt;/contrato&gt;
+      &lt;persona&gt;
+        &lt;rol&gt;VI&lt;/rol&gt;
+        &lt;nombre&gt;Juan&lt;/nombre&gt;
+        &lt;apellido1&gt;Garcia&lt;/apellido1&gt;
+        &lt;apellido2&gt;Garcia&lt;/apellido2&gt;
+        &lt;tipoDocumento&gt;NIF&lt;/tipoDocumento&gt;
+        &lt;numeroDocumento&gt;000000000T&lt;/numeroDocumento&gt;
+        &lt;soporteDocumento&gt;999999999&lt;/soporteDocumento&gt;
+        &lt;fechaNacimiento&gt;1999-01-01&lt;/fechaNacimiento&gt;
+        &lt;nacionalidad&gt;ESP&lt;/nacionalidad&gt;
+        &lt;sexo&gt;H&lt;/sexo&gt;
+        &lt;direccion&gt;
+          &lt;direccion&gt;C/Serrano 127&lt;/direccion&gt;
+          &lt;direccionComplementaria&gt;Portal A. 2B&lt;/direccionComplementaria&gt;
+          &lt;codigoMunicipio&gt;28079&lt;/codigoMunicipio&gt;
+          &lt;codigoPostal&gt;28001&lt;/codigoPostal&gt;
+          &lt;pais&gt;ESP&lt;/pais&gt;
+        &lt;/direccion&gt;
+        &lt;telefono&gt;666666666&lt;/telefono&gt;
+        &lt;correo&gt;juangarcia@correo.es&lt;/correo&gt;
+      &lt;/persona&gt;
+      &lt;persona&gt;
+        &lt;rol&gt;VI&lt;/rol&gt;
+        &lt;nombre&gt;Pedro&lt;/nombre&gt;
+        &lt;apellido1&gt;Garcia&lt;/apellido1&gt;
+        &lt;apellido2&gt;Fernandez&lt;/apellido2&gt;
+        &lt;fechaNacimiento&gt;2018-01-01&lt;/fechaNacimiento&gt;
+        &lt;nacionalidad&gt;ESP&lt;/nacionalidad&gt;
+        &lt;sexo&gt;H&lt;/sexo&gt;
+        &lt;direccion&gt;
+          &lt;direccion&gt;C/Serrano 127&lt;/direccion&gt;
+          &lt;direccionComplementaria&gt;Portal A. 2B&lt;/direccionComplementaria&gt;
+          &lt;codigoMunicipio&gt;28079&lt;/codigoMunicipio&gt;
+          &lt;codigoPostal&gt;28001&lt;/codigoPostal&gt;
+          &lt;pais&gt;ESP&lt;/pais&gt;
+        &lt;/direccion&gt;
+        &lt;telefono&gt;666666666&lt;/telefono&gt;
+        &lt;correo&gt;juangarcia@correo.es&lt;/correo&gt;
+        &lt;parentesco&gt;12&lt;/parentesco&gt;
+      &lt;/persona&gt;
+    &lt;/comunicacion&gt;
+  &lt;/solicitud&gt;
+&lt;/alt:peticion&gt;]]&gt;
+</ns0:solicitud>
+    </ns0:envioFicheroXML>
+  </soap-env:Body>
+</soap-env:Envelope>

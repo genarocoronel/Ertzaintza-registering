@@ -1,0 +1,45 @@
+.r01gClsCommonSearch26716 {
+	BORDER-RIGHT: #fff 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #fff 1px solid; PADDING-LEFT: 5px; FLOAT: left; PADDING-BOTTOM: 5px; MARGIN: 1px 0px; VERTICAL-ALIGN: middle; BORDER-LEFT: #fff 1px solid; WIDTH: 98%; PADDING-TOP: 5px; BORDER-BOTTOM: #fff 1px solid
+}
+.r01gClsCommonSearch26716 FORM {
+	
+}
+.r01gClsCommonSearch26716 INPUT {
+	BORDER-RIGHT: #969696 1px solid; BORDER-TOP: #969696 1px solid; BORDER-LEFT: #969696 1px solid; BORDER-BOTTOM: #969696 1px solid
+}
+.r01gClsCont26716 {
+	BORDER-RIGHT: #ccc 1px solid; BORDER-TOP: #ccc 1px solid; MARGIN-BOTTOM: 2px; BORDER-LEFT: #ccc 1px solid; WIDTH: 100%; BORDER-BOTTOM: #ccc 1px solid; BACKGROUND-COLOR: #e4e4e4
+}
+.r01gClsSearchTitle26716 {
+	FONT-SIZE: 140%; MARGIN-BOTTOM: 2px; PADDING-BOTTOM: 2px; WIDTH: 100%; COLOR: #2B4592; BORDER-BOTTOM: #ece9d8 2px solid; FONT-FAMILY: Verdana
+}
+.r01gClsSearchParamTitle26716 {
+	PADDING-LEFT: 5px; FONT-SIZE: 90%; FLOAT: left; PADDING-BOTTOM: 5px; VERTICAL-ALIGN: middle; WIDTH: 30%; COLOR: #2B4592; PADDING-TOP: 5px; FONT-FAMILY: Verdana
+}
+.r01gClsSearchParam26716 {
+	FONT-SIZE: 90%; PADDING-BOTTOM: 5px; MARGIN: 0px; WIDTH: 68%; COLOR: #2B4592; PADDING-TOP: 5px; FONT-FAMILY: Verdana
+}
+.r01gClsCommonSearchInput26716 {
+	FONT-SIZE: 80%; MARGIN: 0px; WIDTH: 98%; COLOR: #000
+}
+.r01gClsDateInput26716 {
+	FONT-SIZE: 80%; MARGIN: 0px; VERTICAL-ALIGN: top; WIDTH: 25%; COLOR: #000
+}
+.r01gClsCommonSearch26716 SELECT {
+	FONT-SIZE: 80%; WIDTH: 99%
+}
+.r01gClsDateText26716 {
+	VERTICAL-ALIGN: top
+}
+.r01gClsDateTextRight26716 {
+	MARGIN-LEFT: 10px; VERTICAL-ALIGN: top
+}
+.r01gClsBotonera26716 {
+	MARGIN-TOP: 5px; WIDTH: 100%; TEXT-ALIGN: right
+}
+.r01gClsBotonera26716 INPUT.btnBuscar-off {
+	BORDER-RIGHT: #fff 1px solid; BORDER-TOP: #fff 1px solid; FONT-SIZE: 90%; BORDER-LEFT: #fff 1px solid; WIDTH: 15%; COLOR: #fff; BORDER-BOTTOM: #fff 1px solid; FONT-FAMILY: Verdana; BACKGROUND-COLOR: #2B4592
+}
+.r01gClsBotonera26716 INPUT.btnBuscar-on {
+	BORDER-RIGHT: #fff 1px solid; BORDER-TOP: #fff 1px solid; FONT-SIZE: 90%; BORDER-LEFT: #fff 1px solid; WIDTH: 15%; CURSOR: pointer; COLOR: #fff; BORDER-BOTTOM: #fff 1px solid; FONT-FAMILY: Verdana; BACKGROUND-COLOR: #2B4592
+}

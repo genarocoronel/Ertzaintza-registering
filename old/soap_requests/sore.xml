@@ -1,0 +1,101 @@
+<?xml version=\'1.0\' encoding=\'utf-8\'?>\n
+<soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap-env:Header>
+        <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+            <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">\n
+                <SignedInfo>\n<CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>\n
+                    <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>\n
+                    <Reference URI="#3">\n
+                        <Transforms>\n<Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>\n
+                        </Transforms>
+                        \n<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>\n<DigestValue>
+                            ovrMgoUhABGr3gnvoXLCtUFPRlQ=</DigestValue>\n
+                    </Reference>
+                    \n
+                    <Reference URI="#2">\n
+                        <Transforms>\n<Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>\n
+                        </Transforms>
+                        \n<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>\n<DigestValue>
+                            cC1wzhqKWvuIvB10WZLVM0tYeRk=</DigestValue>\n
+                    </Reference>
+                    \n
+                </SignedInfo>
+                \n<SignatureValue>
+                    KO4ZoXNKMiqOE2umjdIUD8qpH25TG4lqKLqKLYlr2z6zczDpUvEFl01pAvCaw9mD\nLvlxWRLtKtBD0BRemq9NXDNVswvSHt4zbUrPzvQsYdKN5cI/yZeQfhBCZgYKmKMp\nDbQcsa9LgumQ73JaL7jBx9h8vsGG9WT1enUlyDTP++vIAMsHcIkN4jye5od+udov\n+bmD6hCWgLMT7pCxDUYOwob253d+mILhooRG2dvU7oSc76gPuAbsbszNQZpyvO4n\ne+nWVRJiSrhWcBT4jr3ncuRmWIZNWYetC0IYtzweLh8xpi+f6PPkdivGRdVJ9PD9\nh3H3FxKRX9zh9hZkq5/P/Q==</SignatureValue>\n
+                <KeyInfo>\n
+                    <wsse:SecurityTokenReference>
+                        <wsse:Reference
+                                ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3"
+                                URI="#id-806b1668-9151-4f7d-8a71-369770bc84a2"/>
+                    </wsse:SecurityTokenReference>
+                </KeyInfo>
+                \n
+            </Signature>
+            <wsse:BinarySecurityToken
+                    xmlns:ns1="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+                    ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3"
+                    EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary"
+                    ns1:Id="id-806b1668-9151-4f7d-8a71-369770bc84a2">
+                MIIC0jCCAbqgAwIBAgIUHBMdYwkKKihcXfz/yQ9LfugwRnQwDQYJKoZIhvcNAQEL\nBQAwIzELMAkGA1UEBhMCVVMxFDASBgNVBAMMC2V4YW1wbGUuY29tMB4XDTIzMTIx\nMjAwMDU1MloXDTIzMTIyMjAwMDU1MlowIzELMAkGA1UEBhMCVVMxFDASBgNVBAMM\nC2V4YW1wbGUuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqBBh\nY2soUdYvRfsWv/8Sk4Fj1Cy+K3LVQdrR9anvNss31imq+3Tw0pSLlFRALE1zlycW\ni2RkVDQB2oJlJmxLcfOcgS1lUGmTDUMmOVg2ade1O29FxLXvYz2QvtOnBYLFbZj2\nOUOG8T0oC+umqUcNz/A+ak0lIvwFKIBeLF4BVCs24vLBxK0V2bSxpMC1kzAOVD7s\nEs49mCmnYAONEQywAeQRIEEXAtyamtlE2Ll/hJhdW7NssOI+1cQkOcjiAm7OE7so\nFa6d3fasDcwQUQRpGE0hLknLGl8vC1r3Ki30lvp8ifxhUDKmSAOycehvxtzNIjud\npW4yaPm5lVkWd1OrcQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBxLgEwkEuqakKn\nyElbOlsCHd7RSdXwMowvYUHGsXwwWv4OYrPPIxxk4PgQOT7PmXhmfMuVWGImv0yC\naLQtZzRLXZ8N1V2Pr3Z9et490wLrj76PWX9MYq7HmDf+VsaqR4m8QhXL6N4fXv3l\nKANGBSNYIU1/F/W1XoCOYu/4GS4+KSLb47iDTca4g9gza643+hXdvjYMHZmGeYnV\nDMa32LRUHHK2rJMFVeCEPe9muIUPap+fhZoNq9Ie30iZvOYAsMLfk38xgYWome43\nbSEIwHJnTcoMl/04l0Bb9aI6NxxwWHuzEWqHhMxB3Yz4nY/AXy0YfchS3loPi+3W\npwPVfmg/\n
+            </wsse:BinarySecurityToken>
+            <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">\n
+                <SignedInfo>\n<CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>\n
+                    <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>\n
+                    <Reference URI="#3">\n
+                        <Transforms>\n<Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>\n
+                        </Transforms>
+                        \n<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>\n<DigestValue>
+                            ovrMgoUhABGr3gnvoXLCtUFPRlQ=</DigestValue>\n
+                    </Reference>
+                    \n
+                    <Reference URI="#2">\n
+                        <Transforms>\n<Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>\n
+                        </Transforms>
+                        \n<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>\n<DigestValue>
+                            cC1wzhqKWvuIvB10WZLVM0tYeRk=</DigestValue>\n
+                    </Reference>
+                    \n
+                </SignedInfo>
+                \n<SignatureValue>
+                    KO4ZoXNKMiqOE2umjdIUD8qpH25TG4lqKLqKLYlr2z6zczDpUvEFl01pAvCaw9mD\nLvlxWRLtKtBD0BRemq9NXDNVswvSHt4zbUrPzvQsYdKN5cI/yZeQfhBCZgYKmKMp\nDbQcsa9LgumQ73JaL7jBx9h8vsGG9WT1enUlyDTP++vIAMsHcIkN4jye5od+udov\n+bmD6hCWgLMT7pCxDUYOwob253d+mILhooRG2dvU7oSc76gPuAbsbszNQZpyvO4n\ne+nWVRJiSrhWcBT4jr3ncuRmWIZNWYetC0IYtzweLh8xpi+f6PPkdivGRdVJ9PD9\nh3H3FxKRX9zh9hZkq5/P/Q==</SignatureValue>\n
+                <KeyInfo>\n
+                    <wsse:SecurityTokenReference>
+                        <X509Data>\n
+                            <X509IssuerSerial>\n<X509IssuerName>CN=example.com,C=US</X509IssuerName>\n<X509SerialNumber>
+                                160278015698101764727843533025395571685028021876</X509SerialNumber>\n
+                            </X509IssuerSerial>
+                            \n<X509Certificate>
+                                MIIC0jCCAbqgAwIBAgIUHBMdYwkKKihcXfz/yQ9LfugwRnQwDQYJKoZIhvcNAQEL\nBQAwIzELMAkGA1UEBhMCVVMxFDASBgNVBAMMC2V4YW1wbGUuY29tMB4XDTIzMTIx\nMjAwMDU1MloXDTIzMTIyMjAwMDU1MlowIzELMAkGA1UEBhMCVVMxFDASBgNVBAMM\nC2V4YW1wbGUuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqBBh\nY2soUdYvRfsWv/8Sk4Fj1Cy+K3LVQdrR9anvNss31imq+3Tw0pSLlFRALE1zlycW\ni2RkVDQB2oJlJmxLcfOcgS1lUGmTDUMmOVg2ade1O29FxLXvYz2QvtOnBYLFbZj2\nOUOG8T0oC+umqUcNz/A+ak0lIvwFKIBeLF4BVCs24vLBxK0V2bSxpMC1kzAOVD7s\nEs49mCmnYAONEQywAeQRIEEXAtyamtlE2Ll/hJhdW7NssOI+1cQkOcjiAm7OE7so\nFa6d3fasDcwQUQRpGE0hLknLGl8vC1r3Ki30lvp8ifxhUDKmSAOycehvxtzNIjud\npW4yaPm5lVkWd1OrcQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBxLgEwkEuqakKn\nyElbOlsCHd7RSdXwMowvYUHGsXwwWv4OYrPPIxxk4PgQOT7PmXhmfMuVWGImv0yC\naLQtZzRLXZ8N1V2Pr3Z9et490wLrj76PWX9MYq7HmDf+VsaqR4m8QhXL6N4fXv3l\nKANGBSNYIU1/F/W1XoCOYu/4GS4+KSLb47iDTca4g9gza643+hXdvjYMHZmGeYnV\nDMa32LRUHHK2rJMFVeCEPe9muIUPap+fhZoNq9Ie30iZvOYAsMLfk38xgYWome43\nbSEIwHJnTcoMl/04l0Bb9aI6NxxwWHuzEWqHhMxB3Yz4nY/AXy0YfchS3loPi+3W\npwPVfmg/\n</X509Certificate>\n
+                        </X509Data>
+                        \n
+                    </wsse:SecurityTokenReference>
+                </KeyInfo>
+                \n
+            </Signature>
+            <wsse:UsernameToken>
+                <wsse:Username>202004</wsse:Username>
+                <wsse:Password
+                        Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">
+                    lkdKJ93s
+                </wsse:Password>
+            </wsse:UsernameToken>
+            <wsu:Timestamp
+                    xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+                    wsu:Id="2">
+                <wsu:Created>2023-12-12T00:08:19.943Z</wsu:Created>
+                <wsu:Expires>2023-12-12T00:13:19.943Z</wsu:Expires>
+            </wsu:Timestamp>
+        </wsse:Security>
+    </soap-env:Header>
+    <soap-env:Body xmlns:ns1="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+                   ns1:Id="3">
+        <ns0:envioFichero xmlns:ns0="https://ws.negocio.registroHostelero.a19.gvdi.com">
+            <ns0:fichero>
+                MXwyMDIwMDR8QkxBSSBCTEFJIEFURVJQRVRYRUEgQlNTMDAwMjl8MjAyMzEyMDJ8MDE0MXwxfAoyfHwyMDQ0MTczMTIwNnxYfDIwMjMwNDAyfENPUk9ORUx8TUFOUklRVUVafEdFTkFSTyBFWkVRVUlFTHxNfDE5ODYwNDAyfEFSR0VOVElOQXwyMDIzMTIwMQ==
+            </ns0:fichero>
+            <ns0:language>es</ns0:language>
+            <ns0:nombreFichero>202004.txt</ns0:nombreFichero>
+            <ns0:cif>B20805578</ns0:cif>
+        </ns0:envioFichero>
+    </soap-env:Body>
+</soap-env:Envelope>

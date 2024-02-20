@@ -1,0 +1,163 @@
+.r01gClsBanner {
+	
+}
+/*=================================================================*/
+/* Estilos creados por adclick para el apartado Seguridad privada  */
+/*=================================================================*/
+H1 {FONT-SIZE: 105%; MARGIN-BOTTOM: 2px; PADDING-BOTTOM: 2px; WIDTH: 100%; COLOR: #2B4592; BORDER-BOTTOM: #ece9d8 2px solid; FONT-FAMILY: Verdana}
+H2 {font:bold 0.9em verdana, Arial, Helvetica, sans-serif;color:#000000;border-bottom:1px solid #E3EFF6;}
+H3 {font:bold 0.9em verdana, Arial, Helvetica, sans-serif;color:#000000;border-bottom:1px solid #E3EFF6;}
+
+H5 {font:bold 0.7em verdana, Arial, Helvetica, sans-serif;color:#000000;border-bottom:1px solid #E3EFF6;}
+
+DIV.contenidopestanias{position:relative;width:100%;margin:20px 20px 20px 20px;border:0px;font-size:75%;}
+
+DIV.contenidopopup{position:relative;width:90%;margin:2px 2px 2px 2px;border:0px}
+
+DIV.pestania{position:relative;float:left;height:1em;padding:4px;border-top:1px solid #999999;border-bottom:0px;border-right:1px solid #999999;border-left:1px solid #999999;background:#FFFFFF;bottom:-1px;z-index:10;background:url(../images/fondoof.jpg) repeat-x}
+DIV.pestaniaselected{position:relative;float:left;height:1em;padding:4px;border-top:1px solid #2B4592;border-bottom:1px solid #FFFFFF;border-right:1px solid #2B4592;border-left:1px solid #2B4592;background:#FFFFFF;bottom:-1px;z-index:10;background:url(../images/fondoon.jpg) repeat-x}
+
+DIV.pestania A:link{position:relative;color:#000000;text-decoration:none;}
+DIV.pestania A:visited{position:relative;color:#000000;text-decoration:none}
+DIV.pestania A:hover{position:relative;color:#000000;text-decoration:none}
+DIV.pestania A:active{position:relative;color:#000000;text-decoration:none}
+DIV.pestania A:href{position:relative;color:#000000;text-decoration:none}
+
+DIV.tab1{position:relative;border:1px solid #2B4592;clear:both;z-index:9;text-align:center;padding:10;}
+
+
+DIV.bienvenida{position:relative;border:1px solid #CCCCCC;height:100%;width:100%;text-align:left;background:#FFFFFF;padding-left:6px;padding-right:6px;}
+DIV.bienvenida P{position:relative;top:30%;font:0.8em verdana, Arial, Helvetica, sans-serif;text-align:center}
+DIV.bienvenida SPAN.seguridad{position:relative;top:-0.8em;font:bold 1em  verdana, Arial, Helvetica, sans-serif;color:#000000;background:#FFFFFF;padding:4px;left:30px}
+
+DIV.tab1 FIELDSET{position:relative;border:1px solid #999999;text-align:left;color:#2B4592;font:0.9em verdana, Arial, Helvetica, sans-serif;margin:0px;margin-top:20px;/*padding:4px;*/background:#FFFFFF;padding-left:6px;padding-right:6px;}
+DIV.tab1 FIELDSET LEGEND{position:relative;font:bold 1em  verdana, Arial, Helvetica, sans-serif;color:#000000;}
+
+/*para el tema de las validaciones*/
+DIV.error{position:relative;border:0px;clear:both;z-index:9;text-align:center;padding:10px;}
+
+DIV.error FIELDSET{position:relative;border:1px solid #CC374C;text-align:left;width:96%;color:#000000;font:0.9em verdana, Arial, Helvetica, sans-serif;margin:0px;margin-top:20px;/*padding:4px;*/background:#FFFFFF;}
+DIV.error FIELDSET LEGEND{position:relative;font:bold 1em  verdana, Arial, Helvetica, sans-serif;color:#000000;}
+
+/*para el tema de los mensajes informativos*/
+DIV.alerta{position:relative;border:0px;clear:both;z-index:9;text-align:center;padding:20px;}
+
+DIV.alerta FIELDSET{position:relative;border:1px solid #2B4592;text-align:left;width:100%;color:#000000;font:0.9em verdana, Arial, Helvetica, sans-serif;margin:0px;margin-top:20px;padding:4px;background:#FFFFFF;}
+DIV.alerta FIELDSET LEGEND{position:relative;font:bold 1em  verdana, Arial, Helvetica, sans-serif;color:#000000;}
+
+/*DIV.tab1 FIELDSET.abajo{position:relative;border:1px solid #999999;text-align:left;width:97%;color:#2B4592;font:0.9em verdana, Arial, Helvetica, sans-serif;margin:0px;margin-top:20px;display:none;padding:4px}
+DIV.tab1 FIELDSET.abajo LEGEND{position:relative;font:bold 1em  verdana, Arial, Helvetica, sans-serif;color:#999999;}
+*/
+
+DIV.casiunacolumna{position:relative;width:94%;float:center;padding:0px;margin-left:42px}
+DIV.unacolumna1{position:relative;padding:0px;width:100%;}
+DIV.doscolumnas1{position:relative;width:46%;float:left;padding:0px}
+DIV.uncuarto{position:relative;width:14%;float:left;padding:0px}
+DIV.trescuartos{position:relative;width:80%;float:left;padding:0px}
+DIV.trescuartosCentrado{position:relative;width:100%;float:center;padding:0px}
+DIV.unmedio{position:relative;width:50%;float:left;padding:0px}
+DIV.untercio{position:relative;width:35%;float:left;padding:0px;text-align:left;}
+DIV.dostercios{position:relative;width:65%;float:left;padding:0px;text-align:left;}
+DIV.sesenta{position:relative;width:60%;float:left;text-align:left;}
+DIV.setenta{position:relative;width:65%;float:left;padding:0px;text-align:left;}
+DIV.cuarenta{position:relative;width:40%;float:left;padding:0px;text-align:left;}
+DIV.treinta{position:relative;width:30%;float:left;padding:0px;text-align:left;}
+DIV.setenta{position:relative;width:70%;float:left;padding:0px;text-align:left;}
+DIV.resto{position:relative;width:*;float:left;padding:0px;text-align:left;}
+DIV.resto1{position:relative;width:*;float:left;padding:0px;text-align:left;}
+DIV.unCatorce{position:relative;width:14%;float:left;padding:0px;text-align:left;}
+DIV.unDieciseis{position:relative;width:16%;float:left;padding:0px;text-align:left;}
+DIV.unDieciocho{position:relative;width:18%;float:left;padding:0px;text-align:left;}
+DIV.unVeinte{position:relative;width:20%;float:left;padding:0px;text-align:left;}
+DIV.unVeintitres{position:relative;width:23%;float:left;padding:0px;text-align:left;}
+DIV.unVeintiseis{position:relative;width:26%;float:left;padding:0px;text-align:left;}
+DIV.tab1 LABEL{display:block;float:left;margin:0px;}
+DIV.tab1 LABEL.corto{display:block;float:left;margin:0px;width:9em;}
+DIV.tab1 LABEL.medio{display:block;float:left;width:12em;margin:0px;}
+DIV.tab1 LABEL.cortisimo{display:block;float:left;margin:0px;width:7em;}
+DIV.tab1 LABEL.cortodireccion{display:block;float:left;margin:0px;width:6em;margin-left:1px;}
+DIV.tab1 LABEL.cortisimodireccion{display:block;float:left;margin:0px;width:4em;}
+DIV.tab1 LABEL.cortonumero{display:block;float:left;margin:0px;width:3em;}
+DIV.tab1 LABEL.sinancho{display:block;float:left;margin:0px;width:90%}
+
+
+DIV.tab1 SELECT{display:block;float:left;margin:0px;font:1em verdana, Arial, Helvetica, sans-serif;}
+DIV.tab1 SELECT.ajustado{display:block;float:left;width:48em;margin:0px;font:1em verdana, Arial, Helvetica, sans-serif;}
+DIV.tab1 SELECT.largo{display:block;float:left;width:38em;margin:0px;font:0.9em verdana, Arial, Helvetica, sans-serif;}
+DIV.tab1 SELECT.medio{display:block;float:left;width:15em;margin:0px;font:1em verdana, Arial, Helvetica, sans-serif;}
+DIV.tab1 SELECT.mediolargo{display:block;float:left;width:20em;margin:0px;font:0.9em verdana, Arial, Helvetica, sans-serif;}
+DIV.tab1 SELECT.corto{display:block;float:left;width:9em;margin:0px;font:1em verdana, Arial, Helvetica, sans-serif;}
+DIV.tab1 SELECT.cortisimo{display:block;float:left;width:8em;margin:0px;font:1em verdana, Arial, Helvetica, sans-serif;}
+DIV.tab1 SELECT.arrunta{display:block;float:left;width:28em;margin:0px;font:0.9em verdana, Arial, Helvetica, sans-serif;}
+DIV.limpiafloat{width:100%;clear:both;height:4px;margin:0px;padding:0px;line-height:0px}
+
+.cajadirecciones{border:1px solid #999999;width:3em;float:left;font:1em verdana, Arial, Helvetica, sans-serif;}
+.cajacortisimo{border:1px solid #999999;width:4em;float:left;font:1em verdana, Arial, Helvetica, sans-serif;}
+.cajamedia{border:1px solid #999999;width:15em;float:left;font:1em verdana, Arial, Helvetica, sans-serif;}
+.cajalarga{border:1px solid #999999;width:20em;float:left;font:1em verdana, Arial, Helvetica, sans-serif;}
+.cajacalle{border:1px solid #999999;width:32em;float:left;font:1em verdana, Arial, Helvetica, sans-serif;}
+.cajaarrunta{border:1px solid #999999;width:25em;float:left;font:1em verdana, Arial, Helvetica, sans-serif;}
+.cajalarguisima{border:1px solid #999999;width:38em;float:left;font:1em verdana, Arial, Helvetica, sans-serif;}
+.cajatabla{border:1px solid #999999;width:3em;float:center;font:0.9em verdana, Arial, Helvetica, sans-serif;}
+.cajatablalarga{border:1px solid #999999;width:4em;float:center;font:0.9em verdana, Arial, Helvetica, sans-serif;text-align:center}
+.cajainput{border:1px solid #999999;width:9em;float:left;font:1em verdana, Arial, Helvetica, sans-serif;}
+.cajatlfno{border:1px solid #999999;width:7em;float:left;font:1em verdana, Arial, Helvetica, sans-serif;}
+.cajafecha{border:1px solid #999999;width:7.2em;float:left;font:1em verdana, Arial, Helvetica, sans-serif;}
+.check{border:0px;float:left;}
+
+
+TH{color:#000;font-weight:normal;text-align:center;}
+table.servicio1{width:100%;font:0.9em verdana, Arial, Helvetica, sans-serif;}
+/*table.servicio1 TD{text-align:center;border:1px solid #cccccc}*/
+table.servicio1 TD{font:1.1em;border:1px solid #cccccc}
+table.servicio1 CAPTION{font:bold 1.1em;color:#FFF;background:#2B4592;text-align:left;padding:3px;width:100%;}
+table.servicio1 THEAD{color:#FFF;font-weight:bold;text-align:center;background:#4FB0E5}
+table.servicio1 THEAD TH{color:#FFF;font-weight:bold;text-align:center;padding:2px;}
+table.servicio1 THEAD TH.hidden{display:none;}
+table.servicio1 TR.oscuro{background:#DADADA;}
+table.servicio1 TR.claro{background:#E8E8E8;}
+table.servicio1 TD.hidden{display:none;}
+
+
+table.servicio{width:100%;font:0.8em verdana, Arial, Helvetica, sans-serif;}
+table.servicio TR.caption{font-weight:bold;color:#FFF;background:#2B4592;text-align:left;padding:3px;width:100%;}
+table.servicio TD.gris{font-weight:bold;height:2em;background:#F6F6F6;color:#000000;}
+table.servicio TR.azul{color:#FFF;background:#2B4592;}
+
+/*Estos estilos son para q el display-tag alterne colores a las filas*/
+table.servicio1 TR.odd{background:#DADADA;}
+table.servicio1 TR.even{background:#E8E8E8;}
+
+A.enlace:link{color:#336699;font-weight:normal;text-align:center;text-decoration:underline;}
+A.enlace:visited{color:#336699;font-weight:normal;text-align:center;text-decoration:underline;}
+A.enlace:hover{color:#999999 ;font-weight:normal;text-align:center;text-decoration:underline;}
+A.enlace:active{color:#336699;font-weight:normal;text-align:center;text-decoration:underline;}
+
+/*=====================================================================*/
+/* Fin estilos creados por adclick para el apartado Seguridad privada  */
+/*=====================================================================*/
+
+
+/*=====================================================================*/
+/* Estilo del botón de euskadi.net  modificado por adclick*/
+/*=====================================================================*/
+
+DIV.tab1 INPUT.r01gClsBtnBuscar1-on {
+BORDER-RIGHT: #CCCCCC 1px solid; BORDER-TOP: #CCCCCC 1px solid; FONT-SIZE:  
+90%; BORDER-LEFT: #CCCCCC 1px solid;  CURSOR: pointer; COLOR:  
+#fff; BORDER-BOTTOM: #CCCCCC 1px solid; FONT-FAMILY: Verdana; BACKGROUND-COLOR: #2B4592; align: right
+}
+DIV.tab1 INPUT.r01gClsBtnBuscar1-off {
+BORDER-RIGHT: #CCCCCC 1px solid; BORDER-TOP: #CCCCCC 1px solid; FONT-SIZE:  
+90%; BORDER-LEFT: #CCCCCC 1px solid; CURSOR: pointer; COLOR:  
+#fff; BORDER-BOTTOM: #CCCCCC 1px solid; FONT-FAMILY: Verdana; BACKGROUND-COLOR: #CCCCCC; align: right
+}
+DIV.tab1 INPUT.r01gClsBtnBuscarImagen {
+CURSOR: pointer; COLOR: #fff; FONT-FAMILY: Verdana; BORDER: 0;
+BACKGROUND-IMAGE: url(../images/icomasinfo.gif); BACKGROUND-POSITION: 50% 50%; BACKGROUND-ATTACHMENT: inherit; BACKGROUND-REPEAT: no-repeat;
+WIDTH: 28px; HEIGHT: 21px
+}
+/*=====================================================================*/
+/* Fin Estilo del botón de euskadi.net  */
+/*=====================================================================*/
+    

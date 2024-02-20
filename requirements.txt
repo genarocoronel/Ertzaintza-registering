@@ -1,0 +1,12 @@
+-e git+https://github.com/Lucioric2000/python-zeep#egg=zeep
+flask
+openssl-python
+fastapi
+pytest
+httpx
+pytest-asyncio==0.23.4
+xmlsec
+#pytest-anyio
+trio
+dicttoxml
+streamlit

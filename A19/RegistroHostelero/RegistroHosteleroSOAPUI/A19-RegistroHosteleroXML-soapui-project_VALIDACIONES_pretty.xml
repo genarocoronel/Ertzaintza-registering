@@ -1,0 +1,1240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="e8ad83c1-47f1-4624-8828-1ab121dd2483" activeEnvironment="Default"
+                    name="A19-RegistroHosteleroXML" resourceRoot="" soapui-version="5.2.1" abortOnError="false"
+                    runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+    <con:settings/>
+    <con:interface xsi:type="con:WsdlInterface" id="9734f6f2-10c1-46ff-bab5-079653a3d037" wsaVersion="NONE"
+                   name="JwsServiceSoapBinding" type="wsdl"
+                   bindingName="{https://ws.negocio.registroHostelero.a19.gvdi.com}JwsServiceSoapBinding"
+                   soapVersion="1_1" anonymous="optional"
+                   definition="http://virp0570.ejhsgvdi.net:9810/Ertzaintza/ALOJADOS/A19/EnvioFicheroXML?wsdl"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:settings/>
+        <con:definitionCache type="TEXT"
+                             rootPart="http://virp0570.ejhsgvdi.net:9810/Ertzaintza/ALOJADOS/A19/EnvioFicheroXML?wsdl">
+            <con:part>
+                <con:url>http://virp0570.ejhsgvdi.net:9810/Ertzaintza/ALOJADOS/A19/EnvioFicheroXML?wsdl</con:url>
+                <con:content><![CDATA[<WL5G3N0:definitions name="JwsService" targetNamespace="https://ws.negocio.registroHostelero.a19.gvdi.com" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="https://ws.negocio.registroHostelero.a19.gvdi.com" xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap/">
+  <WL5G3N0:types>
+    <xsd:schema targetNamespace="https://ws.negocio.registroHostelero.a19.gvdi.com" xmlns:ns0="https://ws.negocio.registroHostelero.a19.gvdi.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="https://ws.negocio.registroHostelero.a19.gvdi.com" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:complexType name="envioFicheroXML">
+        <xsd:sequence>
+          <xsd:element form="qualified" name="cabecera" type="ns0:cabecera"/>
+          <xsd:element form="qualified" name="solicitud" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="envioFicheroXMLResponse">
+        <xsd:sequence>
+          <xsd:element form="qualified" name="return" type="ns0:comunicacionResponse"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Exception">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="message" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="cabecera">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="aplicacion" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="codigoArrendador" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="tipoComunicacion" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="comunicacionResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="respuesta" type="ns0:respuesta"/>
+          <xsd:element minOccurs="0" name="resultado" type="ns0:resultado"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="respuesta">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="error" nillable="true" type="ns0:error"/>
+          <xsd:element minOccurs="0" name="peticion" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="error">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="codigo" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="descripcion" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="resultado">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="aplicacion" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="codigoArrendador" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="codigoEstadoComunicacion" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="descEstadoComunicacion" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="fechaPeticion" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="fechaProcesamiento" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="identificadorUsuario" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="nombreUsuario" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="peticion" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="solicitud" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="tipoComunicacion" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="envioFicheroXML" type="ns0:envioFicheroXML"/>
+      <xsd:element name="envioFicheroXMLResponse" type="ns0:envioFicheroXMLResponse"/>
+      <xsd:element name="Exception" type="ns0:Exception"/>
+    </xsd:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="Exception">
+    <WL5G3N0:part element="WL5G3N1:Exception" name="fault"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="envioFicheroXML">
+    <WL5G3N0:part element="WL5G3N1:envioFicheroXML" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="envioFicheroXMLResponse">
+    <WL5G3N0:part element="WL5G3N1:envioFicheroXMLResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="Jws">
+    <WL5G3N0:operation name="envioFicheroXML">
+      <WL5G3N0:input message="WL5G3N1:envioFicheroXML"/>
+      <WL5G3N0:output message="WL5G3N1:envioFicheroXMLResponse"/>
+      <WL5G3N0:fault message="WL5G3N1:Exception" name="Exception"/>
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="JwsServiceSoapBinding" type="WL5G3N1:Jws">
+    <WL5G3N2:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <WL5G3N0:operation name="envioFicheroXML">
+      <WL5G3N2:operation soapAction="https://ws.negocio.registroHostelero.a19.gvdi.com/envioFicheroXML"/>
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:output>
+      <WL5G3N0:fault name="Exception">
+        <WL5G3N2:fault name="Exception" use="literal"/>
+      </WL5G3N0:fault>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="JwsServiceSoapBindingQSService">
+    <WL5G3N0:documentation>OSB Service</WL5G3N0:documentation>
+    <WL5G3N0:port binding="WL5G3N1:JwsServiceSoapBinding" name="JwsServiceSoapBindingQSPort">
+      <WL5G3N2:address location="http://virp0570.ejhsgvdi.net:9810/Ertzaintza/ALOJADOS/A19/EnvioFicheroXML"/>
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>]]></con:content>
+                <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+            </con:part>
+        </con:definitionCache>
+        <con:endpoints>
+            <con:endpoint>https://servicios.pre.ertzaintza.eus/Ertzaintza/ALOJADOS/A19/ComunicacionA</con:endpoint>
+        </con:endpoints>
+        <con:operation id="7d0be2c4-e03c-41ab-9dc0-4e58ce52c1df" isOneWay="false"
+                       action="https://ws.negocio.registroHostelero.a19.gvdi.com/envioFicheroXML" name="envioFicheroXML"
+                       bindingOperationName="envioFicheroXML" type="Request-Response" inputName=""
+                       receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+            <con:settings/>
+            <con:call id="0373cc99-2837-4567-931f-f3ed2e491dee" name="Request 1" outgoingWss="Signature" sslKeystore=""
+                      wssPasswordType="">
+                <con:settings>
+                    <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/>
+                    </con:setting>
+                </con:settings>
+                <con:encoding>UTF-8</con:encoding>
+                <con:endpoint>https://servicios.pre.ertzaintza.eus/Ertzaintza/ALOJADOS/A19/ComunicacionA</con:endpoint>
+                <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://ws.negocio.registroHostelero.a19.gvdi.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:envioFicheroXML>
+         <ws:cabecera>
+            <!--Optional:-->
+            <aplicacion>A19</aplicacion>
+            <!--Optional:-->
+            <codigoArrendador>codBueno</codigoArrendador>
+            <!--Optional:-->
+            <tipoComunicacion>PV</tipoComunicacion>
+         </ws:cabecera>
+         <ws:solicitud><![CDATA[
+<alt:peticion xmlns:alt="http://www.servicios.ertzaintza.eus/Ertzaintza/ALOJADOS/A19/comunicacionPV">
+  <solicitud>
+    <codigoEstablecimiento>480354</codigoEstablecimiento>
+    <comunicacion>
+      <contrato>
+        <referencia>string</referencia>
+        <fechaContrato>2022-09-29</fechaContrato>
+        <fechaEntrada>2022-09-19T01:18:33</fechaEntrada>
+        <fechaSalida>2022-09-21T19:27:14+02:00</fechaSalida>
+        <numPersonas>2</numPersonas>
+        <numHabitaciones>1</numHabitaciones>
+        <internet>false</internet>
+        <pago>
+          <tipoPago>EFECT</tipoPago>
+          <fechaPago>2022-09-29</fechaPago>
+        </pago>
+      </contrato>
+      <persona>
+        <rol>VI</rol>
+        <nombre>Juan</nombre>
+        <apellido1>Garcia</apellido1>
+        <apellido2>Garcia</apellido2>
+        <tipoDocumento>NIF</tipoDocumento>
+        <numeroDocumento>000000000T</numeroDocumento>
+        <soporteDocumento>999999999</soporteDocumento>
+        <fechaNacimiento>1999-01-01</fechaNacimiento>
+        <nacionalidad>ESP</nacionalidad>
+        <sexo>H</sexo>
+        <direccion>
+          <direccion>C/Serrano 127</direccion>
+          <direccionComplementaria>Portal A. 2B</direccionComplementaria>
+          <codigoMunicipio>28079</codigoMunicipio>
+          <codigoPostal>28001</codigoPostal>
+          <pais>ESP</pais>
+        </direccion>
+        <telefono>666666666</telefono>
+        <correo>juangarcia@correo.es</correo>
+      </persona>
+      <persona>
+        <rol>VI</rol>
+        <nombre>Pedro</nombre>
+        <apellido1>Garcia</apellido1>
+        <apellido2>Fernandez</apellido2>
+        <tipoDocumento>NIF</tipoDocumento>
+        <numeroDocumento>000000000T</numeroDocumento>
+        <soporteDocumento>999999999</soporteDocumento>
+        <fechaNacimiento>2018-01-01</fechaNacimiento>
+        <nacionalidad>ESP</nacionalidad>
+        <sexo>H</sexo>
+        <direccion>
+          <direccion>C/Serrano 127</direccion>
+          <direccionComplementaria>Portal A. 2B</direccionComplementaria>
+          <codigoMunicipio>28079</codigoMunicipio>
+          <codigoPostal>28001</codigoPostal>
+          <pais>ESP</pais>
+        </direccion>
+        <telefono>666666666</telefono>
+        <correo>juangarcia@correo.es</correo>
+        <parentesco>12</parentesco>
+      </persona>
+    </comunicacion>
+  </solicitud>
+</alt:peticion>    
+	    ]]]]>><![CDATA[</ws:solicitud>
+      </ws:envioFicheroXML>
+   </soapenv:Body>
+</soapenv:Envelope> ]]></con:request>
+                <con:credentials>
+                    <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+                    <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+                    <con:authType>Global HTTP Settings</con:authType>
+                </con:credentials>
+                <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                <con:jmsPropertyConfig/>
+                <con:wsaConfig mustUnderstand="NONE" version="200508"
+                               action="https://ws.negocio.registroHostelero.a19.gvdi.com/envioFicheroXML"/>
+                <con:wsrmConfig version="1.2"/>
+            </con:call>
+            <con:call id="710d74d4-ec75-403c-b326-a117f98178f4" name="Request Error" outgoingWss="Signature">
+                <con:settings>
+                    <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/>
+                    </con:setting>
+                </con:settings>
+                <con:encoding>UTF-8</con:encoding>
+                <con:endpoint>https://servicios.pre.ertzaintza.eus/Ertzaintza/ALOJADOS/A19/ComunicacionA</con:endpoint>
+                <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://ws.negocio.registroHostelero.a19.gvdi.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:envioFicheroXML>
+         <ws:cabecera>
+            <!--Optional:-->
+            <aplicacion>A19</aplicacion>
+            <!--Optional:-->
+            <codigoArrendador>codBuenoooooooooooooooo</codigoArrendador>
+            <!--Optional:-->
+            <tipoComunicacion>PV</tipoComunicacion>
+         </ws:cabecera>
+         <ws:solicitud><![CDATA[
+<alt:peticion xmlns:alt="http://www.servicios.ertzaintza.eus/Ertzaintza/ALOJADOS/A19/comunicacionPV">
+  <solicitud>
+    <comunicacion>
+      <contrato>
+        <referencia>string</referencia>
+        <fechaContrato>2022-09-29</fechaContrato>
+        <fechaEntrada>2022-09-19T01:18:33</fechaEntrada>
+        <fechaSalida>2022-09-21T19:27:14+02:00</fechaSalida>
+        <numPersonas>2</numPersonas>
+        <numHabitaciones>1</numHabitaciones>
+        <internet>false</internet>
+        <pago>
+          <tipoPago>EFECT</tipoPago>
+          <fechaPago>2022-09-29</fechaPago>
+        </pago>
+      </contrato>
+      <persona>
+        <rol>VI</rol>
+        <nombre>Juan</nombre>
+        <apellido1>Garcia</apellido1>
+        <apellido2>Garcia</apellido2>
+        <tipoDocumento>NIF</tipoDocumento>
+        <numeroDocumento>000000000T</numeroDocumento>
+        <soporteDocumento>999999999</soporteDocumento>
+        <fechaNacimiento>1999-01-01</fechaNacimiento>
+        <nacionalidad>ESP</nacionalidad>
+        <sexo>H</sexo>
+        <direccion>
+          <direccion>C/Serrano 127</direccion>
+          <direccionComplementaria>Portal A. 2B</direccionComplementaria>
+          <codigoMunicipio>28079</codigoMunicipio>
+          <codigoPostal>28001</codigoPostal>
+          <pais>ESP</pais>
+        </direccion>
+        <telefono>666666666</telefono>
+        <correo>juangarcia@correo.es</correo>
+      </persona>
+      <persona>
+        <rol>VI</rol>
+        <nombre>Pedro</nombre>
+        <apellido1>Garcia</apellido1>
+        <apellido2>Fernandez</apellido2>
+        <tipoDocumento>NIF</tipoDocumento>
+        <numeroDocumento>000000000T</numeroDocumento>
+        <soporteDocumento>999999999</soporteDocumento>
+        <fechaNacimiento>2018-01-01</fechaNacimiento>
+        <nacionalidad>ESP</nacionalidad>
+        <sexo>H</sexo>
+        <direccion>
+          <direccion>C/Serrano 127</direccion>
+          <direccionComplementaria>Portal A. 2B</direccionComplementaria>
+          <codigoMunicipio>28079</codigoMunicipio>
+          <codigoPostal>28001</codigoPostal>
+          <pais>ESP</pais>
+        </direccion>
+        <telefono>666666666</telefono>
+        <correo>juangarcia@correo.es</correo>
+        <parentesco>12</parentesco>
+      </persona>
+    </comunicacion>
+  </solicitud>
+</alt:peticion>    
+	    ]]]]>><![CDATA[</ws:solicitud>
+      </ws:envioFicheroXML>
+   </soapenv:Body>
+</soapenv:Envelope> ]]></con:request>
+                <con:credentials>
+                    <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+                    <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+                    <con:authType>Global HTTP Settings</con:authType>
+                </con:credentials>
+                <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                <con:jmsPropertyConfig/>
+                <con:wsaConfig mustUnderstand="NONE" version="200508"
+                               action="https://ws.negocio.registroHostelero.a19.gvdi.com/envioFicheroXML"/>
+                <con:wsrmConfig version="1.2"/>
+            </con:call>
+        </con:operation>
+    </con:interface>
+    <con:testSuite id="7a79c419-9ce4-4908-bc22-3119234a8460" name="TestSuite">
+        <con:settings/>
+        <con:runType>SEQUENTIAL</con:runType>
+        <con:testCase id="61f62846-2387-4350-9fb4-3896ee846220" failOnError="true" failTestCaseOnErrors="true"
+                      keepSession="false" maxResults="0" name="TestCaseDesa" searchProperties="true">
+            <con:settings/>
+            <con:testStep type="request" name="SOAP Request PV OK" id="201051f1-e709-4ec3-80e4-9d007629bef1">
+                <con:settings/>
+                <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:interface>JwsServiceSoapBinding</con:interface>
+                    <con:operation>envioFicheroXML</con:operation>
+                    <con:request name="SOAP Request PV OK" id="406b7244-fd5a-40a1-86a3-ed16cc369fc8"
+                                 outgoingWss="Signature">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:encoding>UTF-8</con:encoding>
+                        <con:endpoint xsi:nil="true"/>
+                        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://ws.negocio.registroHostelero.a19.gvdi.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:envioFicheroXML>\r
+         <ws:cabecera>
+            <!--Optional:-->
+            <aplicacion>Z40</aplicacion>
+            <!--Optional:-->
+            <codigoArrendador>codigoBueno</codigoArrendador>
+            <!--Optional:-->
+            <tipoComunicacion>PV</tipoComunicacion>
+         </ws:cabecera>
+         <ws:solicitud><![CDATA[
+<alt:peticion xmlns:alt="http://www.servicios.ertzaintza.eus/Ertzaintza/ALOJADOS/A19/comunicacionPV">
+  <solicitud>
+    <codigoEstablecimiento>480354</codigoEstablecimiento>
+    <comunicacion>
+      <contrato>
+        <referencia>string</referencia>
+        <fechaContrato>2022-09-29</fechaContrato>
+        <fechaEntrada>2022-09-19T01:18:33</fechaEntrada>
+        <fechaSalida>2022-09-21T19:27:14+02:00</fechaSalida>
+        <numPersonas>2</numPersonas>
+        <numHabitaciones>1</numHabitaciones>
+        <internet>false</internet>
+        <pago>
+          <tipoPago>EFECT</tipoPago>
+          <fechaPago>2022-09-29</fechaPago>
+        </pago>
+      </contrato>
+      <persona>
+        <rol>VI</rol>
+        <nombre>Juan</nombre>
+        <apellido1>Garcia</apellido1>
+        <apellido2>Garcia</apellido2>
+        <tipoDocumento>NIF</tipoDocumento>
+        <numeroDocumento>000000000T</numeroDocumento>
+        <soporteDocumento>999999999</soporteDocumento>
+        <fechaNacimiento>1999-01-01</fechaNacimiento>
+        <nacionalidad>ESP</nacionalidad>
+        <sexo>H</sexo>
+        <direccion>
+          <direccion>C/Serrano 127</direccion>
+          <direccionComplementaria>Portal A. 2B</direccionComplementaria>
+          <codigoMunicipio>28079</codigoMunicipio>
+          <codigoPostal>28001</codigoPostal>
+          <pais>ESP</pais>
+        </direccion>
+        <telefono>666666666</telefono>
+        <correo>juangarcia@correo.es</correo>
+      </persona>
+      <persona>
+        <rol>VI</rol>
+        <nombre>Pedro</nombre>
+        <apellido1>Garcia</apellido1>
+        <apellido2>Fernandez</apellido2>
+        <fechaNacimiento>2018-01-01</fechaNacimiento>
+        <nacionalidad>ESP</nacionalidad>
+        <sexo>H</sexo>
+        <direccion>
+          <direccion>C/Serrano 127</direccion>
+          <direccionComplementaria>Portal A. 2B</direccionComplementaria>
+          <codigoMunicipio>28079</codigoMunicipio>
+          <codigoPostal>28001</codigoPostal>
+          <pais>ESP</pais>
+        </direccion>
+        <telefono>666666666</telefono>
+        <correo>juangarcia@correo.es</correo>
+        <parentesco>12</parentesco>
+      </persona>
+    </comunicacion>
+  </solicitud>
+</alt:peticion>    
+	    ]]]]>><![CDATA[</ws:solicitud>\r
+      </ws:envioFicheroXML>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+                        <con:assertion type="SOAP Response" id="c2af9d0e-df10-48f9-a529-84f85fcd0b2b"/>
+                        <con:credentials>
+                            <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+                            <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+                            <con:authType>Global HTTP Settings</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+                        <con:wsrmConfig version="1.2"/>
+                    </con:request>
+                </con:config>
+            </con:testStep>
+            <con:testStep type="request" name="SOAP Request seguridad ERROR" id="844ec095-7e68-479c-9e84-a41f00a9170a">
+                <con:settings/>
+                <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:interface>JwsServiceSoapBinding</con:interface>
+                    <con:operation>envioFicheroXML</con:operation>
+                    <con:request name="SOAP Request seguridad ERROR" id="b6c399cf-27f0-418c-b540-5778fb16ecb9">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:encoding>UTF-8</con:encoding>
+                        <con:endpoint xsi:nil="true"/>
+                        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://ws.negocio.registroHostelero.a19.gvdi.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:envioFicheroXML>
+         <ws:cabecera>
+            <!--Optional:-->
+            <aplicacion>Z40</aplicacion>
+            <!--Optional:-->
+            <codigoArrendador>codigoBueno</codigoArrendador>
+            <!--Optional:-->
+            <tipoComunicacion>PV</tipoComunicacion>
+         </ws:cabecera>
+         <ws:solicitud><![CDATA[
+<alt:peticion xmlns:alt="http://www.servicios.ertzaintza.eus/Ertzaintza/ALOJADOS/A19/comunicacionPV">
+  <solicitud>
+    <codigoEstablecimiento>480354</codigoEstablecimiento>
+    <comunicacion>
+      <contrato>
+        <referencia>string</referencia>
+        <fechaContrato>2022-09-29</fechaContrato>
+        <fechaEntrada>2022-09-19T01:18:33</fechaEntrada>
+        <fechaSalida>2022-09-21T19:27:14+02:00</fechaSalida>
+        <numPersonas>2</numPersonas>
+        <numHabitaciones>1</numHabitaciones>
+        <internet>false</internet>
+        <pago>
+          <tipoPago>EFECT</tipoPago>
+          <fechaPago>2022-09-29</fechaPago>
+        </pago>
+      </contrato>
+      <persona>
+        <rol>VI</rol>
+        <nombre>Juan</nombre>
+        <apellido1>Garcia</apellido1>
+        <apellido2>Garcia</apellido2>
+        <tipoDocumento>NIF</tipoDocumento>
+        <numeroDocumento>000000000T</numeroDocumento>
+        <soporteDocumento>999999999</soporteDocumento>
+        <fechaNacimiento>1999-01-01</fechaNacimiento>
+        <nacionalidad>ESP</nacionalidad>
+        <sexo>H</sexo>
+        <direccion>
+          <direccion>C/Serrano 127</direccion>
+          <direccionComplementaria>Portal A. 2B</direccionComplementaria>
+          <codigoMunicipio>28079</codigoMunicipio>
+          <codigoPostal>28001</codigoPostal>
+          <pais>ESP</pais>
+        </direccion>
+        <telefono>666666666</telefono>
+        <correo>juangarcia@correo.es</correo>
+      </persona>
+      <persona>
+        <rol>VI</rol>
+        <nombre>Pedro</nombre>
+        <apellido1>Garcia</apellido1>
+        <apellido2>Fernandez</apellido2>
+        <fechaNacimiento>2018-01-01</fechaNacimiento>
+        <nacionalidad>ESP</nacionalidad>
+        <sexo>H</sexo>
+        <direccion>
+          <direccion>C/Serrano 127</direccion>
+          <direccionComplementaria>Portal A. 2B</direccionComplementaria>
+          <codigoMunicipio>28079</codigoMunicipio>
+          <codigoPostal>28001</codigoPostal>
+          <pais>ESP</pais>
+        </direccion>
+        <telefono>666666666</telefono>
+        <correo>juangarcia@correo.es</correo>
+        <parentesco>12</parentesco>
+      </persona>
+    </comunicacion>
+  </solicitud>
+</alt:peticion>    
+	    ]]]]>><![CDATA[</ws:solicitud>
+      </ws:envioFicheroXML>
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+                        <con:assertion type="SOAP Response" id="6c52ad47-1b24-4178-82bd-6f5a3ef9aeeb"/>
+                        <con:assertion type="Simple Contains" id="473da873-8bb6-48d7-9c67-3e8df75505fc" name="Contains">
+                            <con:configuration>
+                                <token>&lt;codigoRetorno>403&lt;/codigoRetorno></token>
+                                <ignoreCase>false</ignoreCase>
+                                <useRegEx>false</useRegEx>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:authType>No Authorization</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+                        <con:wsrmConfig version="1.2"/>
+                    </con:request>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+        </con:testCase>
+        <con:testCase id="d2db786a-ada5-4fa1-93cc-c1589568ff29" failOnError="true" failTestCaseOnErrors="true"
+                      keepSession="false" maxResults="0" name="TestCaseDesaExt" searchProperties="true">
+            <con:settings/>
+            <con:testStep type="request" name="SOAP Request PV OK" id="452d3bf2-5f2b-467f-9bda-815b44c7df9a">
+                <con:settings/>
+                <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:interface>JwsServiceSoapBinding</con:interface>
+                    <con:operation>envioFicheroXML</con:operation>
+                    <con:request name="SOAP Request PV OK" id="406b7244-fd5a-40a1-86a3-ed16cc369fc8"
+                                 outgoingWss="Signature">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:encoding>UTF-8</con:encoding>
+                        <con:endpoint xsi:nil="true"/>
+                        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://ws.negocio.registroHostelero.a19.gvdi.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:envioFicheroXML>\r
+         <ws:cabecera>
+            <!--Optional:-->
+            <aplicacion>Z40</aplicacion>
+            <!--Optional:-->
+            <codigoArrendador>codigoBueno</codigoArrendador>
+            <!--Optional:-->
+            <tipoComunicacion>PV</tipoComunicacion>
+         </ws:cabecera>
+         <ws:solicitud><![CDATA[
+<alt:peticion xmlns:alt="http://www.servicios.ertzaintza.eus/Ertzaintza/ALOJADOS/A19/comunicacionPV">
+  <solicitud>
+    <codigoEstablecimiento>480354</codigoEstablecimiento>
+    <comunicacion>
+      <contrato>
+        <referencia>string</referencia>
+        <fechaContrato>2022-09-29</fechaContrato>
+        <fechaEntrada>2022-09-19T01:18:33</fechaEntrada>
+        <fechaSalida>2022-09-21T19:27:14+02:00</fechaSalida>
+        <numPersonas>2</numPersonas>
+        <numHabitaciones>1</numHabitaciones>
+        <internet>false</internet>
+        <pago>
+          <tipoPago>EFECT</tipoPago>
+          <fechaPago>2022-09-29</fechaPago>
+        </pago>
+      </contrato>
+      <persona>
+        <rol>VI</rol>
+        <nombre>Juan</nombre>
+        <apellido1>Garcia</apellido1>
+        <apellido2>Garcia</apellido2>
+        <tipoDocumento>NIF</tipoDocumento>
+        <numeroDocumento>000000000T</numeroDocumento>
+        <soporteDocumento>999999999</soporteDocumento>
+        <fechaNacimiento>1999-01-01</fechaNacimiento>
+        <nacionalidad>ESP</nacionalidad>
+        <sexo>H</sexo>
+        <direccion>
+          <direccion>C/Serrano 127</direccion>
+          <direccionComplementaria>Portal A. 2B</direccionComplementaria>
+          <codigoMunicipio>28079</codigoMunicipio>
+          <codigoPostal>28001</codigoPostal>
+          <pais>ESP</pais>
+        </direccion>
+        <telefono>666666666</telefono>
+        <correo>juangarcia@correo.es</correo>
+      </persona>
+      <persona>
+        <rol>VI</rol>
+        <nombre>Pedro</nombre>
+        <apellido1>Garcia</apellido1>
+        <apellido2>Fernandez</apellido2>
+        <fechaNacimiento>2018-01-01</fechaNacimiento>
+        <nacionalidad>ESP</nacionalidad>
+        <sexo>H</sexo>
+        <direccion>
+          <direccion>C/Serrano 127</direccion>
+          <direccionComplementaria>Portal A. 2B</direccionComplementaria>
+          <codigoMunicipio>28079</codigoMunicipio>
+          <codigoPostal>28001</codigoPostal>
+          <pais>ESP</pais>
+        </direccion>
+        <telefono>666666666</telefono>
+        <correo>juangarcia@correo.es</correo>
+        <parentesco>12</parentesco>
+      </persona>
+    </comunicacion>
+  </solicitud>
+</alt:peticion>    
+	    ]]]]>><![CDATA[</ws:solicitud>\r
+      </ws:envioFicheroXML>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+                        <con:assertion type="SOAP Response" id="c2af9d0e-df10-48f9-a529-84f85fcd0b2b"/>
+                        <con:credentials>
+                            <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+                            <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+                            <con:authType>Global HTTP Settings</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+                        <con:wsrmConfig version="1.2"/>
+                    </con:request>
+                </con:config>
+            </con:testStep>
+            <con:testStep type="request" name="SOAP Request seguridad ERROR" id="829c1256-aa45-4967-a673-2212ea3bf182">
+                <con:settings/>
+                <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:interface>JwsServiceSoapBinding</con:interface>
+                    <con:operation>envioFicheroXML</con:operation>
+                    <con:request name="SOAP Request seguridad ERROR" id="b6c399cf-27f0-418c-b540-5778fb16ecb9">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:encoding>UTF-8</con:encoding>
+                        <con:endpoint xsi:nil="true"/>
+                        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://ws.negocio.registroHostelero.a19.gvdi.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:envioFicheroXML>
+         <ws:cabecera>
+            <!--Optional:-->
+            <aplicacion>Z40</aplicacion>
+            <!--Optional:-->
+            <codigoArrendador>codigoBueno</codigoArrendador>
+            <!--Optional:-->
+            <tipoComunicacion>PV</tipoComunicacion>
+         </ws:cabecera>
+         <ws:solicitud><![CDATA[
+<alt:peticion xmlns:alt="http://www.servicios.ertzaintza.eus/Ertzaintza/ALOJADOS/A19/comunicacionPV">
+  <solicitud>
+    <codigoEstablecimiento>480354</codigoEstablecimiento>
+    <comunicacion>
+      <contrato>
+        <referencia>string</referencia>
+        <fechaContrato>2022-09-29</fechaContrato>
+        <fechaEntrada>2022-09-19T01:18:33</fechaEntrada>
+        <fechaSalida>2022-09-21T19:27:14+02:00</fechaSalida>
+        <numPersonas>2</numPersonas>
+        <numHabitaciones>1</numHabitaciones>
+        <internet>false</internet>
+        <pago>
+          <tipoPago>EFECT</tipoPago>
+          <fechaPago>2022-09-29</fechaPago>
+        </pago>
+      </contrato>
+      <persona>
+        <rol>VI</rol>
+        <nombre>Juan</nombre>
+        <apellido1>Garcia</apellido1>
+        <apellido2>Garcia</apellido2>
+        <tipoDocumento>NIF</tipoDocumento>
+        <numeroDocumento>000000000T</numeroDocumento>
+        <soporteDocumento>999999999</soporteDocumento>
+        <fechaNacimiento>1999-01-01</fechaNacimiento>
+        <nacionalidad>ESP</nacionalidad>
+        <sexo>H</sexo>
+        <direccion>
+          <direccion>C/Serrano 127</direccion>
+          <direccionComplementaria>Portal A. 2B</direccionComplementaria>
+          <codigoMunicipio>28079</codigoMunicipio>
+          <codigoPostal>28001</codigoPostal>
+          <pais>ESP</pais>
+        </direccion>
+        <telefono>666666666</telefono>
+        <correo>juangarcia@correo.es</correo>
+      </persona>
+      <persona>
+        <rol>VI</rol>
+        <nombre>Pedro</nombre>
+        <apellido1>Garcia</apellido1>
+        <apellido2>Fernandez</apellido2>
+        <fechaNacimiento>2018-01-01</fechaNacimiento>
+        <nacionalidad>ESP</nacionalidad>
+        <sexo>H</sexo>
+        <direccion>
+          <direccion>C/Serrano 127</direccion>
+          <direccionComplementaria>Portal A. 2B</direccionComplementaria>
+          <codigoMunicipio>28079</codigoMunicipio>
+          <codigoPostal>28001</codigoPostal>
+          <pais>ESP</pais>
+        </direccion>
+        <telefono>666666666</telefono>
+        <correo>juangarcia@correo.es</correo>
+        <parentesco>12</parentesco>
+      </persona>
+    </comunicacion>
+  </solicitud>
+</alt:peticion>    
+	    ]]]]>><![CDATA[</ws:solicitud>
+      </ws:envioFicheroXML>
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+                        <con:assertion type="SOAP Response" id="6c52ad47-1b24-4178-82bd-6f5a3ef9aeeb"/>
+                        <con:assertion type="Simple Contains" id="473da873-8bb6-48d7-9c67-3e8df75505fc" name="Contains">
+                            <con:configuration>
+                                <token>&lt;codigoRetorno>403&lt;/codigoRetorno></token>
+                                <ignoreCase>false</ignoreCase>
+                                <useRegEx>false</useRegEx>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:authType>No Authorization</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+                        <con:wsrmConfig version="1.2"/>
+                    </con:request>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+        </con:testCase>
+        <con:testCase id="4e4e7562-7f8b-4709-b301-07a89249ad7c" failOnError="true" failTestCaseOnErrors="true"
+                      keepSession="false" maxResults="0" name="TestCasePre" searchProperties="true">
+            <con:settings/>
+            <con:testStep type="request" name="SOAP Request PV OK" id="d1084438-9ea2-48fb-8ef5-0b60eb6b0b14">
+                <con:settings/>
+                <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:interface>JwsServiceSoapBinding</con:interface>
+                    <con:operation>envioFicheroXML</con:operation>
+                    <con:request name="SOAP Request PV OK" id="406b7244-fd5a-40a1-86a3-ed16cc369fc8"
+                                 outgoingWss="Signature">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:encoding>UTF-8</con:encoding>
+                        <con:endpoint xsi:nil="true"/>
+                        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://ws.negocio.registroHostelero.a19.gvdi.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:envioFicheroXML>\r
+         <ws:cabecera>
+            <!--Optional:-->
+            <aplicacion>Z40</aplicacion>
+            <!--Optional:-->
+            <codigoArrendador>codigoBueno</codigoArrendador>
+            <!--Optional:-->
+            <tipoComunicacion>PV</tipoComunicacion>
+         </ws:cabecera>
+         <ws:solicitud><![CDATA[
+<alt:peticion xmlns:alt="http://www.servicios.ertzaintza.eus/Ertzaintza/ALOJADOS/A19/comunicacionPV">
+  <solicitud>
+    <codigoEstablecimiento>480354</codigoEstablecimiento>
+    <comunicacion>
+      <contrato>
+        <referencia>string</referencia>
+        <fechaContrato>2022-09-29</fechaContrato>
+        <fechaEntrada>2022-09-19T01:18:33</fechaEntrada>
+        <fechaSalida>2022-09-21T19:27:14+02:00</fechaSalida>
+        <numPersonas>2</numPersonas>
+        <numHabitaciones>1</numHabitaciones>
+        <internet>false</internet>
+        <pago>
+          <tipoPago>EFECT</tipoPago>
+          <fechaPago>2022-09-29</fechaPago>
+        </pago>
+      </contrato>
+      <persona>
+        <rol>VI</rol>
+        <nombre>Juan</nombre>
+        <apellido1>Garcia</apellido1>
+        <apellido2>Garcia</apellido2>
+        <tipoDocumento>NIF</tipoDocumento>
+        <numeroDocumento>000000000T</numeroDocumento>
+        <soporteDocumento>999999999</soporteDocumento>
+        <fechaNacimiento>1999-01-01</fechaNacimiento>
+        <nacionalidad>ESP</nacionalidad>
+        <sexo>H</sexo>
+        <direccion>
+          <direccion>C/Serrano 127</direccion>
+          <direccionComplementaria>Portal A. 2B</direccionComplementaria>
+          <codigoMunicipio>28079</codigoMunicipio>
+          <codigoPostal>28001</codigoPostal>
+          <pais>ESP</pais>
+        </direccion>
+        <telefono>666666666</telefono>
+        <correo>juangarcia@correo.es</correo>
+      </persona>
+      <persona>
+        <rol>VI</rol>
+        <nombre>Pedro</nombre>
+        <apellido1>Garcia</apellido1>
+        <apellido2>Fernandez</apellido2>
+        <fechaNacimiento>2018-01-01</fechaNacimiento>
+        <nacionalidad>ESP</nacionalidad>
+        <sexo>H</sexo>
+        <direccion>
+          <direccion>C/Serrano 127</direccion>
+          <direccionComplementaria>Portal A. 2B</direccionComplementaria>
+          <codigoMunicipio>28079</codigoMunicipio>
+          <codigoPostal>28001</codigoPostal>
+          <pais>ESP</pais>
+        </direccion>
+        <telefono>666666666</telefono>
+        <correo>juangarcia@correo.es</correo>
+        <parentesco>12</parentesco>
+      </persona>
+    </comunicacion>
+  </solicitud>
+</alt:peticion>    
+	    ]]]]>><![CDATA[</ws:solicitud>\r
+      </ws:envioFicheroXML>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+                        <con:assertion type="SOAP Response" id="c2af9d0e-df10-48f9-a529-84f85fcd0b2b"/>
+                        <con:credentials>
+                            <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+                            <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+                            <con:authType>Global HTTP Settings</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+                        <con:wsrmConfig version="1.2"/>
+                    </con:request>
+                </con:config>
+            </con:testStep>
+            <con:testStep type="request" name="SOAP Request seguridad ERROR" id="5ab30001-cab7-4756-ac8d-22e319686f51">
+                <con:settings/>
+                <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:interface>JwsServiceSoapBinding</con:interface>
+                    <con:operation>envioFicheroXML</con:operation>
+                    <con:request name="SOAP Request seguridad ERROR" id="b6c399cf-27f0-418c-b540-5778fb16ecb9">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:encoding>UTF-8</con:encoding>
+                        <con:endpoint xsi:nil="true"/>
+                        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://ws.negocio.registroHostelero.a19.gvdi.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:envioFicheroXML>
+         <ws:cabecera>
+            <!--Optional:-->
+            <aplicacion>Z40</aplicacion>
+            <!--Optional:-->
+            <codigoArrendador>codigoBueno</codigoArrendador>
+            <!--Optional:-->
+            <tipoComunicacion>PV</tipoComunicacion>
+         </ws:cabecera>
+         <ws:solicitud><![CDATA[
+<alt:peticion xmlns:alt="http://www.servicios.ertzaintza.eus/Ertzaintza/ALOJADOS/A19/comunicacionPV">
+  <solicitud>
+    <codigoEstablecimiento>480354</codigoEstablecimiento>
+    <comunicacion>
+      <contrato>
+        <referencia>string</referencia>
+        <fechaContrato>2022-09-29</fechaContrato>
+        <fechaEntrada>2022-09-19T01:18:33</fechaEntrada>
+        <fechaSalida>2022-09-21T19:27:14+02:00</fechaSalida>
+        <numPersonas>2</numPersonas>
+        <numHabitaciones>1</numHabitaciones>
+        <internet>false</internet>
+        <pago>
+          <tipoPago>EFECT</tipoPago>
+          <fechaPago>2022-09-29</fechaPago>
+        </pago>
+      </contrato>
+      <persona>
+        <rol>VI</rol>
+        <nombre>Juan</nombre>
+        <apellido1>Garcia</apellido1>
+        <apellido2>Garcia</apellido2>
+        <tipoDocumento>NIF</tipoDocumento>
+        <numeroDocumento>000000000T</numeroDocumento>
+        <soporteDocumento>999999999</soporteDocumento>
+        <fechaNacimiento>1999-01-01</fechaNacimiento>
+        <nacionalidad>ESP</nacionalidad>
+        <sexo>H</sexo>
+        <direccion>
+          <direccion>C/Serrano 127</direccion>
+          <direccionComplementaria>Portal A. 2B</direccionComplementaria>
+          <codigoMunicipio>28079</codigoMunicipio>
+          <codigoPostal>28001</codigoPostal>
+          <pais>ESP</pais>
+        </direccion>
+        <telefono>666666666</telefono>
+        <correo>juangarcia@correo.es</correo>
+      </persona>
+      <persona>
+        <rol>VI</rol>
+        <nombre>Pedro</nombre>
+        <apellido1>Garcia</apellido1>
+        <apellido2>Fernandez</apellido2>
+        <fechaNacimiento>2018-01-01</fechaNacimiento>
+        <nacionalidad>ESP</nacionalidad>
+        <sexo>H</sexo>
+        <direccion>
+          <direccion>C/Serrano 127</direccion>
+          <direccionComplementaria>Portal A. 2B</direccionComplementaria>
+          <codigoMunicipio>28079</codigoMunicipio>
+          <codigoPostal>28001</codigoPostal>
+          <pais>ESP</pais>
+        </direccion>
+        <telefono>666666666</telefono>
+        <correo>juangarcia@correo.es</correo>
+        <parentesco>12</parentesco>
+      </persona>
+    </comunicacion>
+  </solicitud>
+</alt:peticion>    
+	    ]]]]>><![CDATA[</ws:solicitud>
+      </ws:envioFicheroXML>
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+                        <con:assertion type="SOAP Response" id="6c52ad47-1b24-4178-82bd-6f5a3ef9aeeb"/>
+                        <con:assertion type="Simple Contains" id="473da873-8bb6-48d7-9c67-3e8df75505fc" name="Contains">
+                            <con:configuration>
+                                <token>&lt;codigoRetorno>403&lt;/codigoRetorno></token>
+                                <ignoreCase>false</ignoreCase>
+                                <useRegEx>false</useRegEx>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:authType>No Authorization</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+                        <con:wsrmConfig version="1.2"/>
+                    </con:request>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+        </con:testCase>
+        <con:testCase id="34b009d8-69e9-4f28-bafe-4f0d55caca35" failOnError="true" failTestCaseOnErrors="true"
+                      keepSession="false" maxResults="0" name="TestCasePreExt" searchProperties="true">
+            <con:settings/>
+            <con:testStep type="request" name="SOAP Request PV OK" id="e1615273-2cc5-40e3-80a9-fb2b2490d423">
+                <con:settings/>
+                <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:interface>JwsServiceSoapBinding</con:interface>
+                    <con:operation>envioFicheroXML</con:operation>
+                    <con:request name="SOAP Request PV OK" id="406b7244-fd5a-40a1-86a3-ed16cc369fc8"
+                                 outgoingWss="Signature">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:encoding>UTF-8</con:encoding>
+                        <con:endpoint>https://servicios.pre.ertzaintza.eus/Ertzaintza/ALOJADOS/A19/ComunicacionA
+                        </con:endpoint>
+                        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://ws.negocio.registroHostelero.a19.gvdi.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:envioFicheroXML>\r
+         <ws:cabecera>
+            <!--Optional:-->
+            <aplicacion>Z40</aplicacion>
+            <!--Optional:-->
+            <codigoArrendador>codigoBueno</codigoArrendador>
+            <!--Optional:-->
+            <tipoComunicacion>PV</tipoComunicacion>
+         </ws:cabecera>
+         <ws:solicitud><![CDATA[
+<alt:peticion xmlns:alt="http://www.servicios.ertzaintza.eus/Ertzaintza/ALOJADOS/A19/comunicacionPV">
+  <solicitud>
+    <codigoEstablecimiento>480354</codigoEstablecimiento>
+    <comunicacion>
+      <contrato>
+        <referencia>string</referencia>
+        <fechaContrato>2022-09-29</fechaContrato>
+        <fechaEntrada>2022-09-19T01:18:33</fechaEntrada>
+        <fechaSalida>2022-09-21T19:27:14+02:00</fechaSalida>
+        <numPersonas>2</numPersonas>
+        <numHabitaciones>1</numHabitaciones>
+        <internet>false</internet>
+        <pago>
+          <tipoPago>EFECT</tipoPago>
+          <fechaPago>2022-09-29</fechaPago>
+        </pago>
+      </contrato>
+      <persona>
+        <rol>VI</rol>
+        <nombre>Juan</nombre>
+        <apellido1>Garcia</apellido1>
+        <apellido2>Garcia</apellido2>
+        <tipoDocumento>NIF</tipoDocumento>
+        <numeroDocumento>000000000T</numeroDocumento>
+        <soporteDocumento>999999999</soporteDocumento>
+        <fechaNacimiento>1999-01-01</fechaNacimiento>
+        <nacionalidad>ESP</nacionalidad>
+        <sexo>H</sexo>
+        <direccion>
+          <direccion>C/Serrano 127</direccion>
+          <direccionComplementaria>Portal A. 2B</direccionComplementaria>
+          <codigoMunicipio>28079</codigoMunicipio>
+          <codigoPostal>28001</codigoPostal>
+          <pais>ESP</pais>
+        </direccion>
+        <telefono>666666666</telefono>
+        <correo>juangarcia@correo.es</correo>
+      </persona>
+      <persona>
+        <rol>VI</rol>
+        <nombre>Pedro</nombre>
+        <apellido1>Garcia</apellido1>
+        <apellido2>Fernandez</apellido2>
+        <fechaNacimiento>2018-01-01</fechaNacimiento>
+        <nacionalidad>ESP</nacionalidad>
+        <sexo>H</sexo>
+        <direccion>
+          <direccion>C/Serrano 127</direccion>
+          <direccionComplementaria>Portal A. 2B</direccionComplementaria>
+          <codigoMunicipio>28079</codigoMunicipio>
+          <codigoPostal>28001</codigoPostal>
+          <pais>ESP</pais>
+        </direccion>
+        <telefono>666666666</telefono>
+        <correo>juangarcia@correo.es</correo>
+        <parentesco>12</parentesco>
+      </persona>
+    </comunicacion>
+  </solicitud>
+</alt:peticion>    
+	    ]]]]>><![CDATA[</ws:solicitud>\r
+      </ws:envioFicheroXML>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+                        <con:assertion type="SOAP Response" id="c2af9d0e-df10-48f9-a529-84f85fcd0b2b"/>
+                        <con:credentials>
+                            <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+                            <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+                            <con:authType>Global HTTP Settings</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+                        <con:wsrmConfig version="1.2"/>
+                    </con:request>
+                </con:config>
+            </con:testStep>
+            <con:testStep type="request" name="SOAP Request seguridad ERROR" id="ca1023c9-460b-4cd6-979b-7c5e1d10f7b7">
+                <con:settings/>
+                <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:interface>JwsServiceSoapBinding</con:interface>
+                    <con:operation>envioFicheroXML</con:operation>
+                    <con:request name="SOAP Request seguridad ERROR" id="b6c399cf-27f0-418c-b540-5778fb16ecb9">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:encoding>UTF-8</con:encoding>
+                        <con:endpoint>https://servicios.pre.ertzaintza.eus/Ertzaintza/ALOJADOS/A19/ComunicacionA
+                        </con:endpoint>
+                        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://ws.negocio.registroHostelero.a19.gvdi.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:envioFicheroXML>
+         <ws:cabecera>
+            <!--Optional:-->
+            <aplicacion>Z40</aplicacion>
+            <!--Optional:-->
+            <codigoArrendador>codigoBueno</codigoArrendador>
+            <!--Optional:-->
+            <tipoComunicacion>PV</tipoComunicacion>
+         </ws:cabecera>
+         <ws:solicitud><![CDATA[
+<alt:peticion xmlns:alt="http://www.servicios.ertzaintza.eus/Ertzaintza/ALOJADOS/A19/comunicacionPV">
+  <solicitud>
+    <codigoEstablecimiento>480354</codigoEstablecimiento>
+    <comunicacion>
+      <contrato>
+        <referencia>string</referencia>
+        <fechaContrato>2022-09-29</fechaContrato>
+        <fechaEntrada>2022-09-19T01:18:33</fechaEntrada>
+        <fechaSalida>2022-09-21T19:27:14+02:00</fechaSalida>
+        <numPersonas>2</numPersonas>
+        <numHabitaciones>1</numHabitaciones>
+        <internet>false</internet>
+        <pago>
+          <tipoPago>EFECT</tipoPago>
+          <fechaPago>2022-09-29</fechaPago>
+        </pago>
+      </contrato>
+      <persona>
+        <rol>VI</rol>
+        <nombre>Juan</nombre>
+        <apellido1>Garcia</apellido1>
+        <apellido2>Garcia</apellido2>
+        <tipoDocumento>NIF</tipoDocumento>
+        <numeroDocumento>000000000T</numeroDocumento>
+        <soporteDocumento>999999999</soporteDocumento>
+        <fechaNacimiento>1999-01-01</fechaNacimiento>
+        <nacionalidad>ESP</nacionalidad>
+        <sexo>H</sexo>
+        <direccion>
+          <direccion>C/Serrano 127</direccion>
+          <direccionComplementaria>Portal A. 2B</direccionComplementaria>
+          <codigoMunicipio>28079</codigoMunicipio>
+          <codigoPostal>28001</codigoPostal>
+          <pais>ESP</pais>
+        </direccion>
+        <telefono>666666666</telefono>
+        <correo>juangarcia@correo.es</correo>
+      </persona>
+      <persona>
+        <rol>VI</rol>
+        <nombre>Pedro</nombre>
+        <apellido1>Garcia</apellido1>
+        <apellido2>Fernandez</apellido2>
+        <fechaNacimiento>2018-01-01</fechaNacimiento>
+        <nacionalidad>ESP</nacionalidad>
+        <sexo>H</sexo>
+        <direccion>
+          <direccion>C/Serrano 127</direccion>
+          <direccionComplementaria>Portal A. 2B</direccionComplementaria>
+          <codigoMunicipio>28079</codigoMunicipio>
+          <codigoPostal>28001</codigoPostal>
+          <pais>ESP</pais>
+        </direccion>
+        <telefono>666666666</telefono>
+        <correo>juangarcia@correo.es</correo>
+        <parentesco>12</parentesco>
+      </persona>
+    </comunicacion>
+  </solicitud>
+</alt:peticion>    
+	    ]]]]>><![CDATA[</ws:solicitud>
+      </ws:envioFicheroXML>
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+                        <con:assertion type="SOAP Response" id="6c52ad47-1b24-4178-82bd-6f5a3ef9aeeb"/>
+                        <con:assertion type="Simple Contains" id="473da873-8bb6-48d7-9c67-3e8df75505fc" name="Contains">
+                            <con:configuration>
+                                <token>&lt;codigoRetorno>403&lt;/codigoRetorno></token>
+                                <ignoreCase>false</ignoreCase>
+                                <useRegEx>false</useRegEx>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:authType>No Authorization</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+                        <con:wsrmConfig version="1.2"/>
+                    </con:request>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+        </con:testCase>
+        <con:properties/>
+    </con:testSuite>
+    <con:properties/>
+    <con:wssContainer>
+        <con:crypto>
+            <con:source>
+                E:/DATOS/Repositorio/Proyectos/Policial/A19-ALOJAMIENTO/Desarrollo/A19_183124/test/soapUIProyect/A19PREEMPRESA.pfx
+            </con:source>
+            <con:password>1</con:password>
+            <con:type>KEYSTORE</con:type>
+        </con:crypto>
+        <con:outgoing>
+            <con:name>Signature</con:name>
+            <con:entry type="Timestamp">
+                <con:configuration>
+                    <timeToLive>60000</timeToLive>
+                    <strictTimestamp>true</strictTimestamp>
+                </con:configuration>
+            </con:entry>
+            <con:entry type="Signature" username="a19preempresa" password="1">
+                <con:configuration>
+                    <crypto>A19PREEMPRESA.pfx</crypto>
+                    <keyIdentifierType>1</keyIdentifierType>
+                    <signatureAlgorithm>http://www.w3.org/2000/09/xmldsig#rsa-sha1</signatureAlgorithm>
+                    <signatureCanonicalization>http://www.w3.org/2001/10/xml-exc-c14n#</signatureCanonicalization>
+                    <useSingleCert>true</useSingleCert>
+                    <digestAlgorithm>http://www.w3.org/2000/09/xmldsig#sha1</digestAlgorithm>
+                    <customTokenValueType/>
+                    <customTokenId/>
+                    <signaturePart><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="id" value=""/>
+  <con:entry key="name" value="Body"/>
+  <con:entry key="namespace" value="http://schemas.xmlsoap.org/soap/envelope/"/>
+  <con:entry key="enc" value="Element"/>
+</xml-fragment>]]></signaturePart>
+                    <signaturePart><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="id" value=""/>
+  <con:entry key="name" value="Timestamp"/>
+  <con:entry key="namespace" value="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"/>
+  <con:entry key="enc" value="Element"/>
+</xml-fragment>]]></signaturePart>
+                    <signaturePart><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="id" value=""/>
+  <con:entry key="name" value="BinarySecurityToken"/>
+  <con:entry key="namespace" value="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"/>
+  <con:entry key="enc" value="Element"/>
+</xml-fragment>]]></signaturePart>
+                </con:configuration>
+            </con:entry>
+        </con:outgoing>
+    </con:wssContainer>
+    <con:oAuth2ProfileContainer/>
+    <con:sensitiveInformation>
+        <ProjectSpecificExposureList>null###null</ProjectSpecificExposureList>
+    </con:sensitiveInformation>
+</con:soapui-project>

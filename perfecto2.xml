@@ -1,0 +1,77 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://ws.negocio.registroHostelero.a19.gvdi.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:envioFicheroXML>
+         <ws:cabecera>
+            <!--Optional:-->
+            <aplicacion>Z40</aplicacion>
+            <!--Optional:-->
+            <codigoArrendador>codigoBueno</codigoArrendador>
+            <!--Optional:-->
+            <tipoComunicacion>PV</tipoComunicacion>
+         </ws:cabecera>
+         <ws:solicitud>
+<alt:peticion xmlns:alt="http://www.servicios.ertzaintza.eus/Ertzaintza/ALOJADOS/A19/comunicacionPV">
+  <solicitud>
+    <codigoEstablecimiento>480354</codigoEstablecimiento>
+    <comunicacion>
+      <contrato>
+        <referencia>string</referencia>
+        <fechaContrato>2022-09-29</fechaContrato>
+        <fechaEntrada>2022-09-19T01:18:33</fechaEntrada>
+        <fechaSalida>2022-09-21T19:27:14+02:00</fechaSalida>
+        <numPersonas>2</numPersonas>
+        <numHabitaciones>1</numHabitaciones>
+        <internet>false</internet>
+        <pago>
+          <tipoPago>EFECT</tipoPago>
+          <fechaPago>2022-09-29</fechaPago>
+        </pago>
+      </contrato>
+      <persona>
+        <rol>VI</rol>
+        <nombre>Juan</nombre>
+        <apellido1>Garcia</apellido1>
+        <apellido2>Garcia</apellido2>
+        <tipoDocumento>NIF</tipoDocumento>
+        <numeroDocumento>000000000T</numeroDocumento>
+        <soporteDocumento>999999999</soporteDocumento>
+        <fechaNacimiento>1999-01-01</fechaNacimiento>
+        <nacionalidad>ESP</nacionalidad>
+        <sexo>H</sexo>
+        <direccion>
+          <direccion>C/Serrano 127</direccion>
+          <direccionComplementaria>Portal A. 2B</direccionComplementaria>
+          <codigoMunicipio>28079</codigoMunicipio>
+          <codigoPostal>28001</codigoPostal>
+          <pais>ESP</pais>
+        </direccion>
+        <telefono>666666666</telefono>
+        <correo>juangarcia@correo.es</correo>
+      </persona>
+      <persona>
+        <rol>VI</rol>
+        <nombre>Pedro</nombre>
+        <apellido1>Garcia</apellido1>
+        <apellido2>Fernandez</apellido2>
+        <fechaNacimiento>2018-01-01</fechaNacimiento>
+        <nacionalidad>ESP</nacionalidad>
+        <sexo>H</sexo>
+        <direccion>
+          <direccion>C/Serrano 127</direccion>
+          <direccionComplementaria>Portal A. 2B</direccionComplementaria>
+          <codigoMunicipio>28079</codigoMunicipio>
+          <codigoPostal>28001</codigoPostal>
+          <pais>ESP</pais>
+        </direccion>
+        <telefono>666666666</telefono>
+        <correo>juangarcia@correo.es</correo>
+        <parentesco>12</parentesco>
+      </persona>
+    </comunicacion>
+  </solicitud>
+</alt:peticion>
+	    </ws:solicitud>
+      </ws:envioFicheroXML>
+   </soapenv:Body>
+</soapenv:Envelope>

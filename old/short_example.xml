@@ -1,0 +1,29 @@
+<soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header xmlns:wsa="http://www.w3.org/2005/08/addressing"><wsa:Action>https://ws.negocio.registroHostelero.a19.gvdi.com/envioFichero</wsa:Action><wsa:MessageID>urn:uuid:e9daec31-0598-4edf-842c-4a5c1d3dc867</wsa:MessageID><wsa:To>https://servicios.pre.ertzaintza.eus/A19/registroHostelero/EnvioFichero</wsa:To><wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><wsse:UsernameToken><wsse:Username>202004</wsse:Username><wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">OjTL9h9GX2ysbN4MRjW18h2MhaE=</wsse:Password><wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">YaKO7X6+a/S56UsaBnK3bQ==</wsse:Nonce><wsu:Created xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">2024-01-07T00:21:02+00:00</wsu:Created></wsse:UsernameToken><wsu:Timestamp xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="idTimestampToken"><wsu:Created>2024-01-06T18:21:02Z</wsu:Created><wsu:Expires>2024-01-06T18:31:02Z</wsu:Expires><wsu:Nonce>Pxcl9OOlhgKRqsJegHSrlA==</wsu:Nonce></wsu:Timestamp></wsse:Security></soap-env:Header><soap-env:Body xmlns:ns1="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" ns1:Id="idBody"><ns0:envioFichero xmlns:ns0="https://ws.negocio.registroHostelero.a19.gvdi.com"><ns0:fichero>MXwyMDIwMDR8QkxBSSBCTEFJIEFURVJQRVRYRUEgQlNTMDAwMjl8MjAyMzEyMDJ8MDE0MXwxfAoyfHwyMDQ0MTczMTIwNnxYfDIwMjMwNDAyfENPUk9ORUx8TUFOUklRVUVafEdFTkFSTyBFWkVRVUlFTHxNfDE5ODYwNDAyfEFSR0VOVElOQXwyMDIzMTIwMQ==</ns0:fichero><ns0:language>es</ns0:language><ns0:nombreFichero>202004.txt</ns0:nombreFichero><ns0:cif>B20805578</ns0:cif></ns0:envioFichero></soap-env:Body><soap-env:Header>
+        <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" soap-env:mustUnderstand="0">
+            <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="Signature-2117099736">
+                <ds:SignedInfo>
+                    <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+                    <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+                    <ds:Reference URI="#idBody">
+                        <ds:Transforms>
+                            <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                        </ds:Transforms>
+                        <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+                        <ds:DigestValue/>
+                    </ds:Reference>
+                    <ds:Reference URI="#idTimestampToken">
+                        <ds:Transforms>
+                            <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                        </ds:Transforms>
+                        <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+                        <ds:DigestValue/>
+                    </ds:Reference>
+                </ds:SignedInfo>
+                <ds:SignatureValue/>
+                <ds:KeyInfo>
+                    <ds:KeyValue/>
+                </ds:KeyInfo>
+            </ds:Signature>
+        </wsse:Security>
+    </soap-env:Header>
+</soap-env:Envelope>

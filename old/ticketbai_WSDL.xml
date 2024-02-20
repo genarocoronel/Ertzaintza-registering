@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WL5G3N1:definitions name="JwsServiceDefinitions"
+                     targetNamespace="https://ws.negocio.registroHostelero.a19.gvdi.com"
+                     xmlns:WL5G3N0="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+                     xmlns:WL5G3N1="http://schemas.xmlsoap.org/wsdl/"
+                     xmlns:WL5G3N2="https://ws.negocio.registroHostelero.a19.gvdi.com"
+                     xmlns:WL5G3N3="java:com.gvdi.oinarri.negocio.errors"
+                     xmlns:WL5G3N4="http://schemas.xmlsoap.org/wsdl/soap/"
+                     xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+    <wsp:UsingPolicy WL5G3N1:Required="true"/>
+    <wsp:Policy WL5G3N0:Id="Sign.xml">
+        <wssp:Integrity xmlns:wls="http://www.bea.com/wls90/security/policy/wsee#part"
+                        xmlns:wssp="http://www.bea.com/wls90/security/policy"
+                        xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+            <wssp:SignatureAlgorithm URI="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+            <wssp:CanonicalizationAlgorithm URI="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+            <wssp:Target>
+                <wssp:DigestAlgorithm URI="http://www.w3.org/2000/09/xmldsig#sha1"/>
+                <wssp:MessageParts Dialect="http://www.bea.com/wls90/security/policy/wsee#part">wls:SystemHeaders()
+                </wssp:MessageParts>
+            </wssp:Target>
+            <wssp:Target>
+                <wssp:DigestAlgorithm URI="http://www.w3.org/2000/09/xmldsig#sha1"/>
+                <wssp:MessageParts Dialect="http://www.bea.com/wls90/security/policy/wsee#part">
+                    wls:SecurityHeader(wsu:Timestamp)
+                </wssp:MessageParts>
+            </wssp:Target>
+            <wssp:Target>
+                <wssp:DigestAlgorithm URI="http://www.w3.org/2000/09/xmldsig#sha1"/>
+                <wssp:MessageParts Dialect="http://schemas.xmlsoap.org/2002/12/wsse#part">wsp:Body()</wssp:MessageParts>
+            </wssp:Target>
+            <wssp:SupportedTokens>
+                <wssp:SecurityToken IncludeInMessage="true"
+                                    TokenType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3">
+                    <wssp:TokenIssuer>1.2.840.113549.1.9.1=#160f496e666f40697a656e70652e636f6d,CN=DESARROLLO - CA
+                        personal de AAPP vascas,OU=AZZ Ziurtagiri publikoa - Certificado publico SCA,L=Avda del
+                        Mediterraneo Etorbidea 3 - 01010 Vitoria-Gasteiz,O=IZENPE S.A. - CIF
+                        A-01337260-RMerc.Vitoria-Gasteiz T1055 F62 S8,C=ES,CN=Herritar eta Erakundeen CA - CA de
+                        Ciudadanos y Entidades (4),OU=NZZ Ziurtagiri publikoa - Certificado publico SCI,O=IZENPE
+                        S.A.,C=ES,CN=CA de Ciudadanos y Entidades (4) - DESARROLLO,OU=NZZ Ziurtagiri publikoa -
+                        Certificado publico SCI,O=IZENPE S.A.,C=ES,CN=Herritar eta Erakundeen CA - CA de Ciudadanos y
+                        Entidades (3),OU=NZZ Ziurtagiri publikoa - Certificado publico SCI,O=IZENPE
+                        S.A.,C=ES,2.5.4.5=#1309333333323232303046,OU=DESARROLLO,O=IZENPE,CN=CA personal Gobierno Vasco -
+                        DESARROLLO,OU=Ziurtagiri publikoa - Certificado publico,O=IZENPE S.A.,C=ES,CN=AC RAIZ
+                        DNIE,OU=DNIE,O=DIRECCION GENERAL DE LA POLICIA,C=ES,CN=DESARROLLO - CA de Ciudadanos y Entidades
+                        (3),OU=NZZ Ziurtagiri publikoa - Certificado publico SCI,O=IZENPE
+                        S.A.,C=ES,OU=dgtCA,O=dgt.es,CN=CAroot,CN=pre-aplNoCert.trafico.es,OU=dgtCA,O=dgt.es,CN=CA AAPP
+                        Vascas (2) - DESARROLLO,OU=AZZ Ziurtagiri publikoa - Certificado publico SCA,O=IZENPE
+                        S.A.,C=ES,CN=Izenpe.com - DESARROLLO,O=IZENPE
+                        S.A.,C=ES,CN=CAroot,1.2.840.113549.1.9.1=#160f496e666f40697a656e70652e636f6d,CN=DESARROLLO - CA
+                        AAPP Vascas,OU=AZZ Ziurtagiri publikoa - Certificado publico SCA,L=Avda del Mediterraneo
+                        Etorbidea 3 - 01010 Vitoria-Gasteiz,O=IZENPE S.A. - CIF A-01337260-RMerc.Vitoria-Gasteiz T1055
+                        F62 S8,C=ES,CN=EAEko HAetako langileen CA - CA personal de AAPP vascas (2),OU=AZZ Ziurtagiri
+                        publikoa - Certificado publico SCA,O=IZENPE S.A.,C=ES,CN=Eusko Jaurlaritzako langileen CA - CA
+                        personal Gobierno Vasco,OU=Ziurtagiri publikoa - Certificado publico,O=IZENPE S.A.,C=ES,CN=CA
+                        personal Gobierno Vasco - DESARROLLO,OU=Ziurtagiri publikoa - Certificado publico,O=IZENPE
+                        S.A.,C=ES,CN=AC DNIE 003,OU=DNIE,O=DIRECCION GENERAL DE LA POLICIA,C=ES,CN=Jos􀳦 Prueba Rci
+                        (678),OU=People,O=dgt.es,CN=AC DNIE 002,OU=DNIE,O=DIRECCION GENERAL DE LA
+                        POLICIA,C=ES,CN=Izenpe.com,O=IZENPE S.A.,C=ES,CN=AC DNIE 001,OU=DNIE,O=DIRECCION GENERAL DE LA
+                        POLICIA,C=ES,CN=CIMUBISA,DC=bilbokoudala,DC=lan,CN=digv-client-cert,O=digv,OU=dgtdesCA,O=dgt.es,1.2.840.113549.1.9.1=#160f496e666f40697a656e70652e636f6d,CN=Izenpe.com
+                        - DESARROLLO -,L=Avda del Mediterraneo Etorbidea 3 - 01010 Vitoria-Gasteiz,O=IZENPE S.A. - CIF
+                        A-01337260-RMerc.Vitoria-Gasteiz T1055 F62 S8,C=ES,CN=BesaideDesarrollo,O=dsgv,CN=Izenpe.com -
+                        DESARROLLO,O=IZENPE S.A.,C=ES,CN=EAEko Herri Administrazioen CA - CA AAPP Vascas (2),OU=AZZ
+                        Ziurtagiri publikoa - Certificado publico SCA,O=IZENPE
+                        S.A.,C=ES,CN=CA-ejhsgvdi,DC=ejhsgvdi,DC=net,OU=FNMT Clase 2
+                        CA,O=FNMT,C=ES,CN=CA-ejhsgvdi,DC=ejhsgvdi,DC=net,CN=CA personal de AAPP vascas (2) -
+                        DESARROLLO,OU=AZZ Ziurtagiri publikoa - Certificado publico SCA,O=IZENPE S.A.,C=ES,
+                    </wssp:TokenIssuer>
+                </wssp:SecurityToken>
+            </wssp:SupportedTokens>
+        </wssp:Integrity>
+        <wssp:MessageAge Age="60" xmlns:wssp="http://www.bea.com/wls90/security/policy"/>
+    </wsp:Policy>
+    <wsp:Policy WL5G3N0:Id="Auth.xml">
+        <wssp:Identity xmlns:wssp="http://www.bea.com/wls90/security/policy">
+            <wssp:SupportedTokens>
+                <wssp:SecurityToken
+                        TokenType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#UsernameToken">
+                    <wssp:UsePassword
+                            Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText"/>
+                </wssp:SecurityToken>
+                <wssp:SecurityToken
+                        TokenType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3"/>
+            </wssp:SupportedTokens>
+        </wssp:Identity>
+    </wsp:Policy>
+    <WL5G3N1:types>
+        <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+                   targetNamespace="java:com.gvdi.oinarri.negocio.errors"
+                   xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/"
+                   xmlns:WL5G3N1="https://ws.negocio.registroHostelero.a19.gvdi.com"
+                   xmlns:WL5G3N2="java:com.gvdi.oinarri.negocio.errors"
+                   xmlns:WL5G3N3="http://schemas.xmlsoap.org/wsdl/soap/"
+                   xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <xs:import namespace="java:java.util"/>
+            <xs:complexType name="BusinessException">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="BusinessErrors" nillable="true" type="java:ArrayList"
+                                xmlns:java="java:java.util"/>
+                    <xs:element minOccurs="1" name="BusinessWarnings" nillable="true" type="java:ArrayList"
+                                xmlns:java="java:java.util"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="BusinessException" type="java:BusinessException"
+                        xmlns:java="java:com.gvdi.oinarri.negocio.errors"/>
+        </xs:schema>
+        <xs:schema attributeFormDefault="unqualified"
+                   elementFormDefault="qualified"
+                   targetNamespace="java:java.util"
+                   xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/"
+                   xmlns:WL5G3N1="https://ws.negocio.registroHostelero.a19.gvdi.com"
+                   xmlns:WL5G3N2="java:com.gvdi.oinarri.negocio.errors"
+                   xmlns:WL5G3N3="http://schemas.xmlsoap.org/wsdl/soap/"
+                   xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <xs:import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+            <xs:complexType name="ArrayList">
+                <xs:complexContent>
+                    <xs:restriction base="soapenc:Array" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"/>
+                </xs:complexContent>
+            </xs:complexType>
+        </xs:schema>
+        <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+                   targetNamespace="https://ws.negocio.registroHostelero.a19.gvdi.com"
+                   xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/"
+                   xmlns:WL5G3N1="https://ws.negocio.registroHostelero.a19.gvdi.com"
+                   xmlns:WL5G3N2="java:com.gvdi.oinarri.negocio.errors"
+                   xmlns:WL5G3N3="http://schemas.xmlsoap.org/wsdl/soap/"
+                   xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <xs:element name="envioFichero">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="fichero" type="xs:string"/>
+                        <xs:element name="language" type="xs:string"/>
+                        <xs:element name="nombreFichero" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="envioFicheroResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="return" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </WL5G3N1:types>
+    <WL5G3N1:message name="envioFichero">
+        <WL5G3N1:part element="WL5G3N2:envioFichero" name="parameters"/>
+    </WL5G3N1:message>
+    <WL5G3N1:message name="envioFicheroResponse">
+        <WL5G3N1:part element="WL5G3N2:envioFicheroResponse" name="parameters"/>
+    </WL5G3N1:message>
+    <WL5G3N1:message name="BusinessException">
+        <WL5G3N1:part element="WL5G3N3:BusinessException" name="BusinessException"/>
+    </WL5G3N1:message>
+    <WL5G3N1:portType name="Jws">
+        <WL5G3N1:operation name="envioFichero" parameterOrder="parameters">
+            <WL5G3N1:input message="WL5G3N2:envioFichero"/>
+            <WL5G3N1:output message="WL5G3N2:envioFicheroResponse"/>
+            <WL5G3N1:fault message="WL5G3N2:BusinessException" name="BusinessException"/>
+        </WL5G3N1:operation>
+    </WL5G3N1:portType>
+    <WL5G3N1:binding name="JwsServiceSoapBinding" type="WL5G3N2:Jws">
+        <WL5G3N4:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <WL5G3N1:operation name="envioFichero">
+            <WL5G3N4:operation soapAction="https://ws.negocio.registroHostelero.a19.gvdi.com/envioFichero"
+                               style="document"/>
+            <WL5G3N1:input>
+                <wsp:Policy>
+                    <wsp:PolicyReference URI="#Auth.xml"/>
+                    <wsp:PolicyReference URI="#Sign.xml"/>
+                </wsp:Policy>
+                <WL5G3N4:body parts="parameters" use="literal"/>
+            </WL5G3N1:input>
+            <WL5G3N1:output>
+                <WL5G3N4:body parts="parameters" use="literal"/>
+            </WL5G3N1:output>
+            <WL5G3N1:fault name="BusinessException">
+                <WL5G3N4:fault name="BusinessException" use="literal"/>
+            </WL5G3N1:fault>
+        </WL5G3N1:operation>
+    </WL5G3N1:binding>
+    <WL5G3N1:service name="JwsServiceSoapBindingQSService">
+        <WL5G3N1:port binding="WL5G3N2:JwsServiceSoapBinding" name="JwsServiceSoapBindingQSPort">
+            <WL5G3N4:address location="http://osbcdesa1.ejhsdes.net:9810/Ertzaintza/ALOJADOS/A19/EnvioFichero"/>
+        </WL5G3N1:port>
+    </WL5G3N1:service>
+</WL5G3N1:definitions>

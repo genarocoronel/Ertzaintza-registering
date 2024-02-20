@@ -66,5 +66,17 @@ def test_RH(xml_file=None):
     response = client.service.envioFicheroXML(cabecera=git.cabecera.dict(), solicitud=cdataer)
     #print(response.text)
     return (response.text, response.status_code, response.headers)
+
+def test_API_call(xml_file=None):
+    #cdata = read_ejemplo_PV()
+    git = get_test_RH_item()
+    xmld = dicttoxml.dicttoxml(git.solicitud.dict(), xml_declaration=False, attr_type=False, root=False)
+    xmldp = prettify_xml(xmld)
+    cdataer = f'<![CDATA[<alt:peticion xmlns:alt="http://www.servicios.ertzaintza.eus/Ertzaintza/ALOJADOS/A19/comunicacionPV">\n{xmldp.decode()}\n</alt:peticion>]]>'
+    client = get_client("WSDL_nuevo.xml", credentials_encrypted, "a19preempresa", "1", xml_file=xml_file)
+    response = client.service.envioFicheroXML(cabecera=git.cabecera.dict(), solicitud=cdataer)
+    #print(response.text)
+    return (response.text, response.status_code, response.headers)
+
 if __name__ == "__main__":
     test_RH()

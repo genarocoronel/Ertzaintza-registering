@@ -1,16 +1,10 @@
 from zeep.transports import Transport
 from requests import Session
-import pathlib, base64, datetime, os
-from lxml.etree import QName
-from zeep import ns, Client
-import zeep_plugins, certifi, tokens, debugs
-from zeep.wsse import BinarySignature, UsernameToken
+from zeep import Client
+import zeep_plugins, tokens
+from zeep.wsse import BinarySignature
 from zeep.wsse.signature import Signature
-from zeep.wsse.utils import WSU, get_security_header, get_timestamp
-from tokens import TimestampToken
 from xmlsec import constants
-from zeep.wsa import WsAddressingPlugin
-from requests.auth import HTTPBasicAuth
 
 session = Session()
 
@@ -44,7 +38,6 @@ session.cert = (ertz_cert_file, ertz_key_file)
 transport = Transport(session=session)
 #wsses = [ bsignature]
 #wsses = [signature, bsignature]
-from zeep import xsd
 
 wsses = []
 logging_plugin_instance = zeep_plugins.MyLoggingPlugin([timestamp_token, bsignature], xmlsec_sign=False,

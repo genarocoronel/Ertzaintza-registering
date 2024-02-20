@@ -1,10 +1,9 @@
 from zeep.transports import Transport
 from requests import Session
-from zeep import ns, Client
-import zeep_plugins, certifi, tokens, debugs
-from zeep.wsse import BinarySignature, UsernameToken, Signature
-from xmlsec import constants
-import xmlsec
+from zeep import Client
+import zeep_plugins, tokens
+from zeep.wsse import Signature
+
 session = Session()
 
 ertz_key_file_encrypted = 'A19/RegistroHostelero/RegistroHosteleroSOAPUI/drlive.key'

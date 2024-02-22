@@ -1,10 +1,10 @@
--e git+https://github.com/Lucioric2000/python-zeep#egg=zeep
+-e git+https://github.com/genarocoronel/python-zeep.git#egg=zeep
 flask
 openssl-python
 fastapi
 pytest
 httpx
-pytest-asyncio==0.23.4
+pytest-asyncio==0.23.5
 xmlsec
 #pytest-anyio
 trio

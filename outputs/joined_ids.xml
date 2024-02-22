@@ -1,5 +1,5 @@
 <soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
-  <soap-env:Header><wsa:Action xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing">https://servicios.pre.ertzaintza.eus/A19/registroHostelero/EnvioFicheroXML</wsa:Action><wsa:MessageID xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing">urn:uuid:5d6c2ee9-7273-4342-a69e-d85b14a47131</wsa:MessageID><wsa:To xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing">https://servicios.pre.ertzaintza.eus/A19/registroHostelero/EnvioFicheroXML</wsa:To><wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+  <soap-env:Header><wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">https://servicios.pre.ertzaintza.eus/A19/registroHostelero/EnvioFicheroXML</wsa:Action><wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:f88a2cde-6c15-40b8-bad7-5eb042134c59</wsa:MessageID><wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">https://servicios.pre.ertzaintza.eus/A19/registroHostelero/EnvioFicheroXML</wsa:To><wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
             <wsse:BinarySecurityToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3" wsu:Id="X509Certificate">
             </wsse:BinarySecurityToken>
             <Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="Signature-2117099736">
@@ -45,7 +45,7 @@
             </Signature>
         </wsse:Security>
     </soap-env:Header>
-  <soap-env:Body>
+  <soap-env:Body xmlns:ns1="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" ns1:Id="idBody">
     <ns0:envioFicheroXML xmlns:ns0="https://ws.negocio.registroHostelero.a19.gvdi.com">
       <ns0:cabecera>
         <aplicacion>Sistema de comunicaciones para alojamientos</aplicacion>

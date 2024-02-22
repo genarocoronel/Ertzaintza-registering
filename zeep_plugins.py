@@ -28,11 +28,11 @@ def apply_wsses(wsses, envelope, http_headers):
             iwsse = 1
             for wsse in wsses:
                 envelope, http_headers = wsse.apply(envelope, http_headers)
-                CertPlugin.dump_xml(envelope, f"after_wsse_{iwsse}.xml")
+                CertPlugin.dump_xml(envelope, os.path.join("outputs", f"after_wsse_{iwsse}.xml"))
                 iwsse += 1
         else:
             envelope, http_headers = wsses.apply(envelope, http_headers)
-            CertPlugin.dump_xml(envelope, "after_wsses.xml")
+            CertPlugin.dump_xml(envelope, os.path.join("outputs", "after_wsses.xml"))
 
     return envelope, http_headers
 
@@ -68,7 +68,6 @@ class CertPlugin(Plugin):
         self.key_file = key_file
         self.password = password
         if password:
-            #suffix = f" --pwd {password.decode('utf-8')}"
             suffix = f" --pwd {password}"
         else:
             suffix = ""
@@ -111,9 +110,9 @@ class CertPlugin(Plugin):
         signed = kbsign_envelope(xml_root_element, self.key_file, self.certfile)
 
         tree = etree.ElementTree(xml_root_element)
-        tree.write('signed-soapenv.xml')
+        tree.write(os.path.join("outputs", 'signed-soapenv.xml'))
 
-        with open("signed-soapenv.xml", "rb") as f:
+        with open(os.path.join("outputs", "signed-soapenv.xml"), "rb") as f:
             return etree.parse(f)
 
 
@@ -137,7 +136,7 @@ class MyLoggingPlugin(CertPlugin):
         #print("mlp", self.wsses, self.xmlsec_sign, self.body_id, self.signature_template)
 
     def egress(self, envelope, http_headers, operation, binding_options):
-        self.dump_xml(envelope, "raw_xml.xml")
+        self.dump_xml(envelope, os.path.join("outputs","raw_xml.xml"))
         security_header_xpath = "///*[local-name()='Envelope']/*[local-name()='Header']/*[local-name()='Security']"
         header_xpath = "///*[local-name()='Envelope']/*[local-name()='Header']"
         envelope_xpath = "///*[local-name()='Envelope']"
@@ -165,35 +164,35 @@ class MyLoggingPlugin(CertPlugin):
             sec = envelope.xpath(header_xpath)
             print("secs", sec, list(sec), list(sec[0]))
             sec[0].append(stsec[0])
-        self.dump_xml(envelope, "joined.xml")
+        self.dump_xml(envelope, os.path.join("outputs","joined.xml"))
         if self.body_id is not None:
             replace_xpath_args(envelope, "///*[local-name()='Envelope']/*[local-name()='Body']",
                                     QName(XMLNamespaces.wsu, 'Id'), self.body_id)
-        self.dump_xml(envelope, "joined_ids.xml")
+        self.dump_xml(envelope, os.path.join("outputs","joined_ids.xml"))
 
         if self.wsses is not None:
             envelope, http_headers = apply_wsses(self.wsses, envelope, http_headers)
         #self.kbsign_envelope(envelope)
-        self.dump_xml(envelope, "short.xml")
-        prettify_xml_file("short.xml", "short_pretty.xml")
+        self.dump_xml(envelope, os.path.join("outputs", "short.xml"))
+        prettify_xml_file(os.path.join("outputs", "short.xml"), os.path.join("outputs", "short_pretty.xml"))
 
         args = " --id-attr:Id Body --id-attr:Id Timestamp --store-references "
         #args = " --id-attr:Id Body --id-attr:Id Timestamp --id-attr:Id BinarySecurityToken"
         #args = " --id-attr:Id Body --id-attr:Id Timestamp --id-attr:Id BinarySecurityToken --id-attr:Id Security"
         verify_args = args
-        filename = "short.xml"
+        filename = os.path.join("outputs", "short.xml")
         if self.xmlsec_sign:
-            verify_filename = "signed_xml.xml"
+            verify_filename = os.path.join("outputs", "signed_xml.xml")
             self.sign_file(args, filename, verify_filename)
-            prettify_xml_file(verify_filename, "signed_xml_pretty.xml")
+            prettify_xml_file(verify_filename, os.path.join("outputs", "signed_xml_pretty.xml"))
         else:
-            verify_filename = "short.xml"
+            verify_filename = os.path.join("outputs", "short.xml")
         if self.xmlsec_verify:
             self.verify(verify_args, verify_filename)
         if self.xmlsec_sign:
-            with open("signed_xml.xml", "rb") as f:
+            with open(os.path.join("outputs", "signed_xml.xml"), "rb") as f:
                 return etree.parse(f), http_headers
-            return self.read_xml("signed_xml.xml"), http_headers
+            return self.read_xml(os.path.join("outputs", "signed_xml.xml")), http_headers
         else:
             return envelope, http_headers
 
@@ -263,13 +262,13 @@ def prettify_xml_file(xmlfile, outfile):
 def prettify_xml(xml_string):
     return etree.tostring(etree.fromstring(xml_string), pretty_print=True)
 
+
 def prettify_etree(etree_obj):
     return etree.tostring(etree_obj, pretty_print=True)
 
 
 def cert_key_matches(certfile, key_file, password):
     from OpenSSL.crypto import load_certificate, load_privatekey, FILETYPE_PEM
-    from OpenSSL.crypto import X509, X509Name, X509Extension, X509Req, X509Store, X509StoreContext, PKey, TYPE_RSA
     from OpenSSL.crypto import dump_certificate, dump_privatekey, dump_publickey, FILETYPE_PEM, FILETYPE_ASN1
     import OpenSSL.SSL
     with open(certfile, 'rb') as f:

@@ -3,6 +3,7 @@ from requests import Session
 from zeep import Client
 import zeep_plugins, tokens
 from zeep.wsse import Signature
+import os
 
 session = Session()
 
@@ -49,12 +50,12 @@ def get_client(wsdl_file, credentials_encrypted, username, password, xml_file=No
                                                     signature_method=signature_method,
                                                      digest_method=digest_method,key_format=6) # 6 is the format for PCKS12 PEM
     return apply_logging_plugin_instance(wsdl_file, credentials_encrypted, [timestamp_token, pbsignature],
-                                         False, True, "signature_template_BST_2_other_algorithm.xml",
+                                         False, True, os.path.join("inputs", "signature_template_BST_2_other_algorithm.xml"),
                                          xml_file=xml_file)
 
 
 def read_ejemplo_PV():
-    with open("ejemploPV.xml", "r") as f:
+    with open(os.path.join("inputs", "ejemploPV.xml"), "r") as f:
         cdata = f.read()
     return cdata
 
@@ -62,7 +63,7 @@ if __name__ == "__main__":
     cdata = read_ejemplo_PV()
     credentials = dict(key_file="old/mycert/privkey.pem", certfile="old/mycert/fullchain.pem")
     #client = get_client("WSDL_nuevo.xml", credentials_encrypted, "202004", "lkdKJ93s")
-    client = get_client("WSDL_nuevo.xml", credentials_encrypted, "a19preempresa",
+    client = get_client("inputs/WSDL_nuevo.xml", credentials_encrypted, "a19preempresa",
                         "1", xml_file=None)
     #response = client.service.envioFicheroXML(cabecera={"aplicacion": "A19", "codigoArrendador": "B20805578", "tipoComunicacion": "PV"}, solicitud=cdata)
     #response = client.service.envioFicheroXML(cabecera={"aplicacion": "A19", "codigoArrendador": "codBueno", "tipoComunicacion": "PV"}, solicitud=cdata)

@@ -17,9 +17,9 @@ button = st.button('Test API call')
 
 if button:
     if xmlta:
-        call = caller.test_API_call(xml_file=xmlta)
+        call = caller.API_call(xmlta)
     else:
-        call = caller.test_API_call(xml_file=xmlfp)
+        call = caller.API_call(xmlfp)
     st.write(call[0])
 
 #st.write(f"Writing this page at {datetime.datetime.now()}, being xmlsec.Key {getattr('xmlsec', 'Key', None)} -v {str(xmlsec)}")

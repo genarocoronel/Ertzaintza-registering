@@ -2,8 +2,8 @@ from tipos import (Contrato, TipoPago, Direccion, Persona, TipoCabecera,
                    DatosEstablecimiento, Establecimiento, Persona, ComunicacionRH,
                    ComunicacionPV, ItemPV,  SolicitudPV, TipoCabecera, TipoPago,
                    PeticionPV, SolicitudRH, PeticionRH, ItemRH, Direccion, Persona,)
-from soap_call import get_client, read_ejemplo_PV, credentials_encrypted
-import dicttoxml, io
+from soap_call import get_client, read_ejemplo_PV, credentials_encrypted, ertz_cert_file
+import dicttoxml, io, os
 from zeep_plugins import prettify_xml
 from lxml import etree
 
@@ -63,25 +63,28 @@ def RH_call(xml_file=None):
     xmld = dicttoxml.dicttoxml(git.solicitud.dict(), xml_declaration=False, attr_type=False, root=False)
     xmldp = prettify_xml(xmld)
     cdataer = f'<![CDATA[<alt:peticion xmlns:alt="http://www.servicios.ertzaintza.eus/Ertzaintza/ALOJADOS/A19/comunicacionPV">\n{xmldp.decode()}\n</alt:peticion>]]>'
-    client = get_client("inputs/WSDL_nuevo.xml", credentials_encrypted, "a19preempresa", "1", xml_file=xml_file)
+    client = get_client(os.path.join("inputs", "WSDL_nuevo.xml"), credentials_encrypted, "a19preempresa", "1", xml_file=xml_file)
     response = client.service.envioFicheroXML(cabecera=git.cabecera.dict(), solicitud=cdataer)
     #print(response.text)
     return (response.text, response.status_code, response.headers)
 
-def API_call(xml_file_or_string):
-    #cdata = read_ejemplo_PV()
-    if isinstance(xml_file_or_string, io.IOBase):
-        xml_string=xml_file_or_string.read()
-        xmldp = etree.fromstring(xml_string)
-    else:
-         xmldp = prettify_xml(xml_file_or_string)
+def API_call(xml_file_or_string, credentials_file):
+    cdata = read_ejemplo_PV()
+    git = get_test_RH_item()
+    xmld = dicttoxml.dicttoxml(git.solicitud.dict(), xml_declaration=False, attr_type=False, root=False)
+    xmldp = prettify_xml(xmld)
     cdataer = f'<![CDATA[<alt:peticion xmlns:alt="http://www.servicios.ertzaintza.eus/Ertzaintza/ALOJADOS/A19/comunicacionPV">\n{xmldp.decode()}\n</alt:peticion>]]>'
-    client = get_client("inputs/WSDL_nuevo.xml", credentials_encrypted, "a19preempresa", "1", xml_file=xml_file)
+    if credentials_file is None:
+        credentials = credentials_encrypted
+    else:
+        credentials = dict(key_file=credentials_file, certfile=ertz_cert_file)
+    client = get_client(os.path.join("inputs", "WSDL_nuevo.xml"), credentials, "a19preempresa", "1", xml_file=xml_file_or_string)
+    #as the xml_file argument was provided to the get_client function, the cabecera and solicitud arguments will be ignoered
     response = client.service.envioFicheroXML(cabecera=git.cabecera.dict(), solicitud=cdataer)
     #print(response.text)
     return (response.text, response.status_code, response.headers)
 
 if __name__ == "__main__":
     #test_RH()
-    with open("inputs/perfecto2.xml", "r") as f:
-        ta = API_call(f)
+    with open(os.path.join("inputs", "perfecto2_seeu.xml"), "r") as f:
+        ta = API_call(f, None)

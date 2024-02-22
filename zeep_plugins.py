@@ -88,7 +88,6 @@ class CertPlugin(Plugin):
     def read_xml(file_like_or_string):
         """Read an XML file and return an etree object.
         file_like_or_string can be a string with the file contents, or a file-like object for reading XML contents."""
-        #with open(filename, "rb") as f:
         if hasattr(file_like_or_string, "read"):
             return etree.parse(file_like_or_string).getroot()
         else:
@@ -136,12 +135,12 @@ class MyLoggingPlugin(CertPlugin):
         #print("mlp", self.wsses, self.xmlsec_sign, self.body_id, self.signature_template)
 
     def egress(self, envelope, http_headers, operation, binding_options):
-        self.dump_xml(envelope, os.path.join("outputs","raw_xml.xml"))
         security_header_xpath = "///*[local-name()='Envelope']/*[local-name()='Header']/*[local-name()='Security']"
         header_xpath = "///*[local-name()='Envelope']/*[local-name()='Header']"
         envelope_xpath = "///*[local-name()='Envelope']"
         if self.xml_file is not None:
             envelope = self.read_xml(self.xml_file)
+        self.dump_xml(envelope, os.path.join("outputs","raw_xml.xml"))
         header = get_or_create_header(envelope)
 
         wsa_action = operation.abstract.wsa_action

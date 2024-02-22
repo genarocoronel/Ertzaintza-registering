@@ -2,11 +2,11 @@
 flask
 openssl-python
 fastapi
-pytest
 httpx
-pytest-asyncio==0.23.5
 xmlsec
-#pytest-anyio
 trio
 dicttoxml
 streamlit
+#pytest
+#pytest-asyncio==0.23.5
+#pytest-anyio

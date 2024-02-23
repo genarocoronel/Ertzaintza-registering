@@ -162,7 +162,6 @@ class PersonalizedBinarySignature(BinarySignature):
 
         srtok.attrib["URI"] = "#" + ensure_id(bintok)
         bintok.text = base64.b64encode(self.cert_data).decode("utf-8")
-        #security.insert(1, bintok)
 
         _sign_node(ctx, signature, bintok, digest_method)
         ctx.sign(signature)

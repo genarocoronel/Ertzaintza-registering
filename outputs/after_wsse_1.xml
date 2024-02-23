@@ -1,5 +1,5 @@
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://ws.negocio.registroHostelero.a19.gvdi.com">
-   <soapenv:Header><wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">https://servicios.pre.ertzaintza.eus/A19/registroHostelero/EnvioFicheroXML</wsa:Action><wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:c419b0d0-db58-4c32-827a-b6d5a28fe937</wsa:MessageID><wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">https://servicios.pre.ertzaintza.eus/A19/registroHostelero/EnvioFicheroXML</wsa:To><wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+<soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap-env:Header><wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">https://servicios.pre.ertzaintza.eus/A19/registroHostelero/EnvioFicheroXML</wsa:Action><wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:c4eadf7d-d2a2-4277-b244-294ece474d5b</wsa:MessageID><wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing">https://servicios.pre.ertzaintza.eus/A19/registroHostelero/EnvioFicheroXML</wsa:To><wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
             <wsse:BinarySecurityToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3" wsu:Id="X509Certificate">
             </wsse:BinarySecurityToken>
             <Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="Signature-2117099736">
@@ -43,80 +43,101 @@
                     <KeyValue/>
                 </KeyInfo>
             </Signature>
-        <wsse:UsernameToken><wsse:Username>a19preempresa</wsse:Username><wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">os35FC5Cv9pZE+m7lmekDNm6njs=</wsse:Password><wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">4E+NmhJzDjMBn/x/o2MnyA==</wsse:Nonce><wsu:Created xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">2024-02-22T07:20:25+00:00</wsu:Created></wsse:UsernameToken><wsu:Timestamp xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="idTimestampToken"><wsu:Created>2024-02-22T01:20:25Z</wsu:Created><wsu:Expires>2024-02-22T18:00:25Z</wsu:Expires></wsu:Timestamp></wsse:Security>
-    </soapenv:Header>
-   <soapenv:Body xmlns:ns0="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" ns0:Id="idBody">
-      <ws:envioFicheroXML>
-         <ws:cabecera>
-            <!--Optional:-->
-            <aplicacion>Z40</aplicacion>
-            <!--Optional:-->
-            <codigoArrendador>codigoBueno</codigoArrendador>
-            <!--Optional:-->
-            <tipoComunicacion>PV</tipoComunicacion>
-         </ws:cabecera>
-         <ws:solicitud>
-<alt:peticion xmlns:alt="http://servicios.pre.ertzaintza.eus/Ertzaintza/ALOJADOS/A19/comunicacionPV">
-  <solicitud>
-    <codigoEstablecimiento>480354</codigoEstablecimiento>
-    <comunicacion>
-      <contrato>
-        <referencia>string</referencia>
-        <fechaContrato>2022-09-29</fechaContrato>
-        <fechaEntrada>2022-09-19T01:18:33</fechaEntrada>
-        <fechaSalida>2022-09-21T19:27:14+02:00</fechaSalida>
-        <numPersonas>2</numPersonas>
-        <numHabitaciones>1</numHabitaciones>
-        <internet>false</internet>
-        <pago>
-          <tipoPago>EFECT</tipoPago>
-          <fechaPago>2022-09-29</fechaPago>
-        </pago>
-      </contrato>
-      <persona>
-        <rol>VI</rol>
-        <nombre>Juan</nombre>
-        <apellido1>Garcia</apellido1>
-        <apellido2>Garcia</apellido2>
-        <tipoDocumento>NIF</tipoDocumento>
-        <numeroDocumento>000000000T</numeroDocumento>
-        <soporteDocumento>999999999</soporteDocumento>
-        <fechaNacimiento>1999-01-01</fechaNacimiento>
-        <nacionalidad>ESP</nacionalidad>
-        <sexo>H</sexo>
-        <direccion>
-          <direccion>C/Serrano 127</direccion>
-          <direccionComplementaria>Portal A. 2B</direccionComplementaria>
-          <codigoMunicipio>28079</codigoMunicipio>
-          <codigoPostal>28001</codigoPostal>
-          <pais>ESP</pais>
-        </direccion>
-        <telefono>666666666</telefono>
-        <correo>juangarcia@correo.es</correo>
-      </persona>
-      <persona>
-        <rol>VI</rol>
-        <nombre>Pedro</nombre>
-        <apellido1>Garcia</apellido1>
-        <apellido2>Fernandez</apellido2>
-        <fechaNacimiento>2018-01-01</fechaNacimiento>
-        <nacionalidad>ESP</nacionalidad>
-        <sexo>H</sexo>
-        <direccion>
-          <direccion>C/Serrano 127</direccion>
-          <direccionComplementaria>Portal A. 2B</direccionComplementaria>
-          <codigoMunicipio>28079</codigoMunicipio>
-          <codigoPostal>28001</codigoPostal>
-          <pais>ESP</pais>
-        </direccion>
-        <telefono>666666666</telefono>
-        <correo>juangarcia@correo.es</correo>
-        <parentesco>12</parentesco>
-      </persona>
-    </comunicacion>
-  </solicitud>
-</alt:peticion>
-	    </ws:solicitud>
-      </ws:envioFicheroXML>
-   </soapenv:Body>
-</soapenv:Envelope>
+        <wsse:UsernameToken><wsse:Username>a19preempresa</wsse:Username><wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">qrdvU3vkzDQqr+XWgH6inSk2fd0=</wsse:Password><wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">OlM3gQekR4FxTWn67gt/+A==</wsse:Nonce><wsu:Created xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">2024-02-23T08:31:28+00:00</wsu:Created></wsse:UsernameToken><wsu:Timestamp xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="idTimestampToken"><wsu:Created>2024-02-23T02:31:27Z</wsu:Created><wsu:Expires>2024-02-23T19:11:27Z</wsu:Expires></wsu:Timestamp></wsse:Security>
+    </soap-env:Header>
+  <soap-env:Body xmlns:ns1="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" ns1:Id="idBody">
+    <ns0:envioFicheroXML xmlns:ns0="https://ws.negocio.registroHostelero.a19.gvdi.com">
+      <ns0:cabecera>
+        <aplicacion>Cloudbeds integration</aplicacion>
+        <codigoArrendador>B20805578</codigoArrendador>
+        <tipoComunicacion>PV</tipoComunicacion>
+      </ns0:cabecera>
+      <ns0:solicitud>&lt;![CDATA[&lt;alt:peticion xmlns:alt="http://www.servicios.ertzaintza.eus/Ertzaintza/ALOJADOS/A19/comunicacionPV"&gt;
+&lt;solicitud&gt;
+  &lt;codigoEstablecimiento&gt;C1123&lt;/codigoEstablecimiento&gt;
+  &lt;comunicacion&gt;
+    &lt;establecimiento&gt;
+      &lt;codigoEstablecimiento&gt;C1123&lt;/codigoEstablecimiento&gt;
+      &lt;datosEstablecimiento&gt;
+        &lt;tipo&gt;albergue&lt;/tipo&gt;
+        &lt;nombre&gt;BLAI BLAI ATERPETXEA BSS00029&lt;/nombre&gt;
+        &lt;direccion&gt;
+          &lt;direccion&gt;NAFARROA CALLE 37 A&lt;/direccion&gt;
+          &lt;direccion2&gt;BA&lt;/direccion2&gt;
+          &lt;localidad&gt;Zarautz&lt;/localidad&gt;
+          &lt;provincia&gt;Gipuzkoa&lt;/provincia&gt;
+          &lt;codigoPostal&gt;48901&lt;/codigoPostal&gt;
+          &lt;pais&gt;ESP&lt;/pais&gt;
+        &lt;/direccion&gt;
+      &lt;/datosEstablecimiento&gt;
+    &lt;/establecimiento&gt;
+    &lt;contrato&gt;
+      &lt;referencia&gt;B20805578-1&lt;/referencia&gt;
+      &lt;fechaContrato&gt;2022-09-29&lt;/fechaContrato&gt;
+      &lt;fechaEntrada&gt;2022-09-19T01:18:33&lt;/fechaEntrada&gt;
+      &lt;fechaSalida&gt;2022-09-21T19:27:14+02:00&lt;/fechaSalida&gt;
+      &lt;numPersonas&gt;2&lt;/numPersonas&gt;
+      &lt;numHabitaciones&gt;1&lt;/numHabitaciones&gt;
+      &lt;internet&gt;true&lt;/internet&gt;
+      &lt;pago&gt;
+        &lt;tipoPago&gt;EFECT&lt;/tipoPago&gt;
+        &lt;fechaPago&gt;2022-09-29&lt;/fechaPago&gt;
+      &lt;/pago&gt;
+    &lt;/contrato&gt;
+    &lt;persona&gt;
+      &lt;item&gt;
+        &lt;rol&gt;TI&lt;/rol&gt;
+        &lt;nombre&gt;Juan&lt;/nombre&gt;
+        &lt;apellido1&gt;Perez&lt;/apellido1&gt;
+        &lt;apellido2&gt;Gomez&lt;/apellido2&gt;
+        &lt;tipoDocumento&gt;DNI&lt;/tipoDocumento&gt;
+        &lt;numeroDocumento&gt;12345678&lt;/numeroDocumento&gt;
+        &lt;soporteDocumento&gt;DNI&lt;/soporteDocumento&gt;
+        &lt;fechaNacimiento&gt;1956-05-02&lt;/fechaNacimiento&gt;
+        &lt;nacionalidad&gt;ES&lt;/nacionalidad&gt;
+        &lt;sexo&gt;H&lt;/sexo&gt;
+        &lt;direccion&gt;
+          &lt;direccion&gt;Paseo de las Camelias 456&lt;/direccion&gt;
+          &lt;direccion2&gt;Retorno de los Laureles&lt;/direccion2&gt;
+          &lt;localidad&gt;Zaragoza&lt;/localidad&gt;
+          &lt;provincia&gt;Zaragoza&lt;/provincia&gt;
+          &lt;codigoPostal&gt;50012&lt;/codigoPostal&gt;
+          &lt;pais&gt;ES&lt;/pais&gt;
+        &lt;/direccion&gt;
+        &lt;telefono&gt;777777777&lt;/telefono&gt;
+        &lt;telefono2&gt;777777777&lt;/telefono2&gt;
+        &lt;correo&gt;person1@example.com&lt;/correo&gt;
+        &lt;parentesco/&gt;
+      &lt;/item&gt;
+      &lt;item&gt;
+        &lt;rol&gt;VI&lt;/rol&gt;
+        &lt;nombre&gt;Eliseo&lt;/nombre&gt;
+        &lt;apellido1&gt;Perez&lt;/apellido1&gt;
+        &lt;apellido2&gt;Campa&lt;/apellido2&gt;
+        &lt;tipoDocumento&gt;DNI&lt;/tipoDocumento&gt;
+        &lt;numeroDocumento&gt;12345679&lt;/numeroDocumento&gt;
+        &lt;soporteDocumento&gt;DNI&lt;/soporteDocumento&gt;
+        &lt;fechaNacimiento&gt;1986-02-09&lt;/fechaNacimiento&gt;
+        &lt;nacionalidad&gt;ES&lt;/nacionalidad&gt;
+        &lt;sexo&gt;H&lt;/sexo&gt;
+        &lt;direccion&gt;
+          &lt;direccion&gt;Paseo de las Camelias 456&lt;/direccion&gt;
+          &lt;direccion2&gt;Retorno de los Laureles&lt;/direccion2&gt;
+          &lt;localidad&gt;Zaragoza&lt;/localidad&gt;
+          &lt;provincia&gt;Zaragoza&lt;/provincia&gt;
+          &lt;codigoPostal&gt;50012&lt;/codigoPostal&gt;
+          &lt;pais&gt;ES&lt;/pais&gt;
+        &lt;/direccion&gt;
+        &lt;telefono&gt;777777777&lt;/telefono&gt;
+        &lt;telefono2&gt;777777777&lt;/telefono2&gt;
+        &lt;correo&gt;person2@example.com&lt;/correo&gt;
+        &lt;parentesco&gt;12&lt;/parentesco&gt;
+      &lt;/item&gt;
+    &lt;/persona&gt;
+  &lt;/comunicacion&gt;
+&lt;/solicitud&gt;
+
+&lt;/alt:peticion&gt;]]&gt;</ns0:solicitud>
+    </ns0:envioFicheroXML>
+  </soap-env:Body>
+</soap-env:Envelope>

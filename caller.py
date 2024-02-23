@@ -68,8 +68,8 @@ def RH_call(xml_file=None):
     #print(response.text)
     return (response.text, response.status_code, response.headers)
 
-def API_call(xml_file_or_string, credentials_file):
-    cdata = read_ejemplo_PV()
+def API_call(xml_file_or_string, credentials_file, password):
+    #cdata = read_ejemplo_PV()
     git = get_test_RH_item()
     xmld = dicttoxml.dicttoxml(git.solicitud.dict(), xml_declaration=False, attr_type=False, root=False)
     xmldp = prettify_xml(xmld)
@@ -77,7 +77,7 @@ def API_call(xml_file_or_string, credentials_file):
     if credentials_file is None:
         credentials = credentials_encrypted
     else:
-        credentials = dict(key_file=credentials_file, certfile=ertz_cert_file)
+        credentials = dict(key_file=credentials_file, certfile=ertz_cert_file, password=password)
     client = get_client(os.path.join("inputs", "WSDL_nuevo.xml"), credentials, "a19preempresa", "1", xml_file=xml_file_or_string)
     #as the xml_file argument was provided to the get_client function, the cabecera and solicitud arguments will be ignoered
     response = client.service.envioFicheroXML(cabecera=git.cabecera.dict(), solicitud=cdataer)
@@ -87,4 +87,5 @@ def API_call(xml_file_or_string, credentials_file):
 if __name__ == "__main__":
     #test_RH()
     with open(os.path.join("inputs", "perfecto2_seeu.xml"), "r") as f:
-        ta = API_call(f, None)
+        ta = API_call(f, None,  None)
+        print("Response: ", ta[1], ta[0])

@@ -2,6 +2,7 @@ from requests import get
 import streamlit as st
 import datetime
 import caller, xmlsec
+from replit import db
 
 
 #with st.form("Authentication"):
@@ -25,5 +26,5 @@ if button:
     else:
         call = caller.API_call(xmlfp, key_file, pswd)
     st.write(call[0])
-
+st.write(f"Streemlit db {db} -v {str(db)}")
 #st.write(f"Writing this page at {datetime.datetime.now()}, being xmlsec.Key {getattr('xmlsec', 'Key', None)} -v {str(xmlsec)}")

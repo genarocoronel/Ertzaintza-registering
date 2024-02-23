@@ -43,20 +43,6 @@
                 </SignedInfo>
                 <SignatureValue/>
                 <KeyInfo>
-                    <wsse:SecurityTokenReference>
-                        <wsse:Reference URI="#X509Certificate"
-                                        ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509">
-                            <Transforms>
-                                <Transform Algorithm=
-                                                    "http://www.w3.org/2000/09/xmldsig#enveloped-signature">
-                                    <c14n:InclusiveNamespaces xmlns:c14n="http://www.w3.org/2001/10/xml-exc-c14n#" PrefixList="xenc "/>
-                                </Transform>
-                            </Transforms>
-                            <DigestMethod Algorithm=
-                                                  "http://www.w3.org/2000/09/xmldsig#sha1"/>
-                            <DigestValue></DigestValue>
-                        </wsse:Reference>
-                    </wsse:SecurityTokenReference>
                     <KeyValue/>
                 </KeyInfo>
             </Signature>

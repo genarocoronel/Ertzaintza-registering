@@ -50,7 +50,7 @@ def get_client(wsdl_file, credentials_encrypted, username, password, xml_file=No
                                                     signature_method=signature_method,
                                                      digest_method=digest_method,key_format=6) # 6 is the format for PCKS12 PEM
     return apply_logging_plugin_instance(wsdl_file, credentials_encrypted, [timestamp_token, pbsignature],
-                                         False, True, os.path.join("inputs", "signature_template_BST_2_other_algorithm.xml"),
+                                         True, True, os.path.join("inputs", "signature_template_BST_2_other_algorithm.xml"),
                                          xml_file=xml_file)
 
 

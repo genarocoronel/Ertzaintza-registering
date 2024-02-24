@@ -9,7 +9,6 @@
     pkgs.python310Packages.xmlsec
     pkgs.python310Packages.dicttoxml
     pkgs.python310Packages.attrs
-    pkgs.python310Packages.replit
     pkgs.xmlsec
     pkgs.libtool
     pkgs.libxcrypt

@@ -1,6 +1,4 @@
-from requests import get
 import streamlit as st
-import datetime
 import caller, xmlsec
 try:
   from replit import db

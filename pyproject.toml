@@ -5,29 +5,9 @@ description = ""
 authors = ["Your Name <you@example.com>"]
 
 [tool.poetry.dependencies]
-python = ">=3.9.0,<3.12"
-#fastapi = "^0.109.2"
-zeep = "*"
-certifi = "^2024.2.2"
-httpx = "*"
-lxml = "*"
-pydantic = "*"
-requests = "*"
-dicttoxml = "*"
-streamlit = "*"
-attrs = "23.2.0"
-rpds-py = "0.18.0"
-pytest = "^8.0.1"
-fastapi = "^0.109.2"
-pyxmlsecurity = "^1.0.0"
-replit = "^3.5.0"
-[tool.poetry.dev-dependencies]
-pytest = "^8.0.0"
-
-
-[tool.setuptools_scm]
-version_file = "pkg/_version.py"
-write_to = "pkg/_version.py"
+python = ">=3.10.0,<3.11"
+streamlit = "^1.27.2"
+replit = "3.5.0"
 
 [tool.pyright]
 # https://github.com/microsoft/pyright/blob/main/docs/configuration.md
@@ -40,6 +20,5 @@ select = ['E', 'W', 'F', 'I', 'B', 'C4', 'ARG', 'SIM']
 ignore = ['W291', 'W292', 'W293']
 
 [build-system]
-requires = ["poetry-core>=1.0.0", "setuptools>=60",
-    "setuptools-scm>=8.0", "wheel>=0.36.2", "rpds-py>=0.18.0"]
+requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"

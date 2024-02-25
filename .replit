@@ -1,4 +1,5 @@
-run = ["streamlit", "run", "streamlit_app.py", "--server.headless", "true"]
+run = ["streamlit", "run", "main.py", "--server.headless", "true"]
+
 modules = ["python-3.10:v18-20230807-322e88b"]
 
 hidden = [".pythonlibs"]
@@ -7,7 +8,6 @@ hidden = [".pythonlibs"]
 channel = "stable-23_05"
 
 [deployment]
-run = ["streamlit", "run", "--server.address", "0.0.0.0", "--server.headless", "true", "--server.enableCORS=false", "--server.enableWebsocketCompression=false", "--server.runOnSave=false", "streamlit_app.py"]
+run = ["streamlit", "run", "--server.address", "0.0.0.0", "--server.headless", "true", "--server.enableCORS=false", "--server.enableWebsocketCompression=false", "--server.runOnSave=false", "main.py"]
 ignorePorts = false
 deploymentTarget = "gce"
-build = ["sh", "-c", "pip install rpds-py==0.18.0"]

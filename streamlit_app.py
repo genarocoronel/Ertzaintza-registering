@@ -1,10 +1,9 @@
+from requests import get
 import streamlit as st
+import datetime
 import caller, xmlsec
-try:
-  from replit import db
-  # Use db as normal
-except ImportError:
-  db = None  # Or set up an alternative key-value store
+from replit import db
+
 
 #with st.form("Authentication"):
 key_file = st.file_uploader("key", type=None, accept_multiple_files=False, key=None, help=None, on_change=None, args=None, kwargs=None,
@@ -29,4 +28,3 @@ if button:
     st.write(call[0])
 st.write(f"Streemlit db {db} -v {str(db)}")
 #st.write(f"Writing this page at {datetime.datetime.now()}, being xmlsec.Key {getattr('xmlsec', 'Key', None)} -v {str(xmlsec)}")
-from replit import db

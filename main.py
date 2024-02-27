@@ -1,4 +1,6 @@
 import streamlit as st
+import sys
+print("sp", sys.path)
 import replit
 try:
   from replit import db

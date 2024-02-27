@@ -5,7 +5,7 @@ description = ""
 authors = ["Your Name <you@example.com>"]
 
 [tool.poetry.dependencies]
-python = ">=3.9.0,<3.12"
+python = ">=3.9.0,<3.9.7||>=3.10.0,<3.12"
 #fastapi = "^0.109.2"
 zeep = "*"
 certifi = "^2024.2.2"
@@ -14,15 +14,15 @@ lxml = "*"
 pydantic = "*"
 requests = "*"
 dicttoxml = "*"
-streamlit = "*"
+streamlit = "1.31.1"
 attrs = "23.2.0"
 rpds-py = "0.18.0"
 fastapi = "^0.109.2"
 pyxmlsecurity = "^1.0.0"
 replit = "^3.5.0"
 pytest = "^8.0.2"
-[tool.poetry.dev-dependencies]
-pytest = "^8.0.1"
+#[tool.poetry.dev-dependencies]
+#pytest = "^8.0.2"
 
 
 [tool.setuptools_scm]

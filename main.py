@@ -1,9 +1,12 @@
 import streamlit as st
-import xmlsec
+import replit
 try:
   from replit import db
+  print("rdb", db)
 except ModuleNotFoundError:
   db = {}
+  print("rmdb")
+import xmlsec
 
 st.title("Streamlit on Replit")
 

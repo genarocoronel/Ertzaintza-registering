@@ -14,7 +14,8 @@ pkcs12_der_key = 'A19/RegistroHostelero/RegistroHosteleroSOAPUI/A19PREEMPRESA.pf
 ertz_key_file_decrypted = 'A19/RegistroHostelero/RegistroHosteleroSOAPUI/drlive-decrypted.key'
 
 session.cert = (ertz_cert_file, ertz_key_file_decrypted)
-session.verify = ertz_cert_chain_file
+#session.verify = ertz_cert_chain_file
+session.verify = False
 session.auth = ('a19preempresa', '1')
 transport = Transport(session=session)
 

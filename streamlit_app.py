@@ -25,6 +25,5 @@ if button:
         call = caller.API_call(xmlta, key_file, pswd)
     else:
         call = caller.API_call(xmlfp, key_file, pswd)
-    st.write(call[0])
-st.write(f"Streemlit db {db} -v {str(db)}")
-#st.write(f"Writing this page at {datetime.datetime.now()}, being xmlsec.Key {getattr('xmlsec', 'Key', None)} -v {str(xmlsec)}")
+    st.write("Call", call[0])
+st.write()

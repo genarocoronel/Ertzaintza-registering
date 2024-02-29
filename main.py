@@ -1,6 +1,6 @@
 import streamlit as st
 import sys
-print("sp", sys.path)
+from lxml import etree
 import replit
 try:
   from replit import db
@@ -16,7 +16,7 @@ text = f"""
 
 - More information on streamlit [here](https://docs.streamlit.io/)
 - db: {db.keys()}
-- xk: {xmlsec.Key}
+- xk: {getattr(xmlsec, 'Key', None)}
 
 """
 

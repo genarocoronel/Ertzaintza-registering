@@ -1,19 +1,25 @@
 {pkgs}: {
   deps = [
-    pkgs.rustc
-    pkgs.libiconv
-    pkgs.cargo
-    pkgs.xmlsec
     pkgs.libtool
-    pkgs.libxcrypt
-    pkgs.zlib
-    pkgs.xcodebuild
-    pkgs.cacert
-    pkgs.openssl
     pkgs.pkg-config
-    pkgs.coreutils
+    pkgs.arrow-cpp
+    pkgs.rustc
+    pkgs.stdenv.cc.cc.lib
     pkgs.libxml2
-    pkgs.streamlit
-    pkgs.python310Packages.xmlsec
-  ];
+    #pkgs.libiconv
+    #pkgs.cargo
+    #pkgs.cacert
+    #pkgs.zlib
+    #pkgs.xcodebuild
+    #pkgs.libxcrypt
+    pkgs.xmlsec
+    #pkgs.openssl
+    pkgs.python311Packages.pyarrow
+    pkgs.poetry
+];
+  environment = {
+    sessionVariables = {
+      LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
+    };
+  };
 }

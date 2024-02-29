@@ -6,15 +6,10 @@
     pkgs.rustc
     pkgs.stdenv.cc.cc.lib
     pkgs.libxml2
-    #pkgs.libiconv
-    #pkgs.cargo
-    #pkgs.cacert
-    #pkgs.zlib
-    #pkgs.xcodebuild
-    #pkgs.libxcrypt
+    pkgs.python310Packages.pyarrow
+    pkgs.python310Packages.xmlsec
+    pkgs.python310Packages.pydantic
     pkgs.xmlsec
-    #pkgs.openssl
-    pkgs.python311Packages.pyarrow
     pkgs.poetry
 ];
   environment = {

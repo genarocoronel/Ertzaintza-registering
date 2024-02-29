@@ -1,6 +1,6 @@
-run = ["venv/bin/python","-mstreamlit", "run", "main.py", "--server.headless", "true"]
+run = ["venv/bin/python","-mstreamlit", "run", "streamlit_app.py", "--server.headless", "true"]
 compile = "python -mvenv venv; source venv/bin/activate; poetry install"
-modules = ["python-3.1x"]
+modules = ["python-3.11"]
 
 hidden = [".pythonlibs"]
 
@@ -8,7 +8,7 @@ hidden = [".pythonlibs"]
 channel = "stable-23_05"
 
 [deployment]
-run = ["streamlit", "run", "--server.address", "0.0.0.0", "--server.headless", "true", "--server.enableCORS=false", "--server.enableWebsocketCompression=false", "--server.runOnSave=false", "main.py"]
+run = ["venv/bin/python", "-mstreamlit", "run", "--server.address", "0.0.0.0", "--server.headless", "true", "--server.enableCORS=false", "--server.enableWebsocketCompression=false", "--server.runOnSave=false", "streamlit_app.py"]
 ignorePorts = false
 deploymentTarget = "gce"
 build = ["sh", "-c", "python -mvenv venv; source venv/bin/activate; poetry install"]

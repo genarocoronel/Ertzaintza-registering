@@ -25,5 +25,6 @@ if button:
         call = caller.API_call(xmlta, key_file, pswd)
     else:
         call = caller.API_call(xmlfp, key_file, pswd)
-    st.write("Call", call[0])
+    st.write("Call", call)
+    db[f"call-{len(db)+1}"] = call
 st.write()

@@ -30,5 +30,5 @@ if button:
         st.write("Call", call)
         db[f"call-{len(db)+1}"] = call
     except Exception as e:
-        db[f"call-{len(db) + 1}"] = (e, source)
+        db[f"call-{len(db) + 1}"] = (str(e), source)
 st.write()

@@ -3,8 +3,9 @@ from requests import Session
 from zeep import Client
 import zeep_plugins, tokens
 from zeep.wsse import Signature
-import os
-
+import os, certifi, pathlib
+cawhere = pathlib.Path(certifi.where())
+print("cwhr", cawhere)
 session = Session()
 
 ertz_key_file_encrypted = 'A19/RegistroHostelero/RegistroHosteleroSOAPUI/drlive.key'
@@ -13,8 +14,10 @@ ertz_cert_file = 'A19/RegistroHostelero/RegistroHosteleroSOAPUI/drlive.crt'
 pkcs12_der_key = 'A19/RegistroHostelero/RegistroHosteleroSOAPUI/A19PREEMPRESA.pfx'
 ertz_key_file_decrypted = 'A19/RegistroHostelero/RegistroHosteleroSOAPUI/drlive-decrypted.key'
 
-session.cert = (ertz_cert_file, ertz_key_file_decrypted)
+#session.cert = (ertz_cert_file, ertz_key_file_decrypted)
 #session.verify = ertz_cert_chain_file
+session.cafile = cawhere
+session.capath = cawhere.parent
 session.verify = False
 session.auth = ('a19preempresa', '1')
 transport = Transport(session=session)

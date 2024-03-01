@@ -22,9 +22,13 @@ button = st.button('Test API call')
 
 if button:
     if xmlta:
-        call = caller.API_call(xmlta, key_file, pswd)
+        source = xmlta
     else:
-        call = caller.API_call(xmlfp, key_file, pswd)
-    st.write("Call", call)
-    db[f"call-{len(db)+1}"] = call
+        source = xmlfp
+    try:
+        call = caller.API_call(source, key_file, pswd)
+        st.write("Call", call)
+        db[f"call-{len(db)+1}"] = call
+    except Exception as e:
+        db[f"call-{len(db) + 1}"] = (e, source)
 st.write()

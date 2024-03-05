@@ -14,11 +14,10 @@ ertz_cert_file = 'A19/RegistroHostelero/RegistroHosteleroSOAPUI/drlive.crt'
 pkcs12_der_key = 'A19/RegistroHostelero/RegistroHosteleroSOAPUI/A19PREEMPRESA.pfx'
 ertz_key_file_decrypted = 'A19/RegistroHostelero/RegistroHosteleroSOAPUI/drlive-decrypted.key'
 
-#session.cert = (ertz_cert_file, ertz_key_file_decrypted)
-#session.verify = ertz_cert_chain_file
+session.cert = (ertz_cert_file, ertz_key_file_decrypted)
+session.verify = ertz_cert_chain_file
 session.cafile = cawhere
 session.capath = cawhere.parent
-session.verify = False
 session.auth = ('a19preempresa', '1')
 transport = Transport(session=session)
 

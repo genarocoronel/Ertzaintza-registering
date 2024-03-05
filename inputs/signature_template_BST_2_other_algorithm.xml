@@ -17,7 +17,7 @@
                         <c14n:InclusiveNamespaces xmlns:c14n="http://www.w3.org/2001/10/xml-exc-c14n#" PrefixList="xenc "/>
                     </CanonicalizationMethod>
                     <SignatureMethod Algorithm=
-                                             "http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+                                             "http://www.w3.org/2000/09/xmldsig#rsa-sha1" Canonicalization="http://www.w3.org/TR/1999/WD-xml-c14n-19991115"/>
                     <Reference URI="#idBody">
                         <Transforms>
                             <Transform Algorithm=
@@ -26,7 +26,7 @@
                             </Transform>
                         </Transforms>
                         <DigestMethod Algorithm=
-                                              "http://www.w3.org/2000/09/xmldsig#sha1"/>
+                                              "http://www.w3.org/2000/09/xmldsig#rsa-sha1" Canonicalization="http://www.w3.org/TR/1999/WD-xml-c14n-19991115"/>
                         <DigestValue></DigestValue>
                     </Reference>
                     <Reference URI="#idTimestampToken">
@@ -37,7 +37,7 @@
                             </Transform>
                         </Transforms>
                         <DigestMethod Algorithm=
-                                              "http://www.w3.org/2000/09/xmldsig#sha1"/>
+                                              "http://www.w3.org/2000/09/xmldsig#rsa-sha1" Canonicalization="http://www.w3.org/TR/1999/WD-xml-c14n-19991115"/>
                         <DigestValue></DigestValue>
                     </Reference>
                 </SignedInfo>

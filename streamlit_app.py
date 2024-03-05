@@ -3,7 +3,8 @@ import streamlit as st
 import datetime
 import caller, xmlsec
 from replit import db
-
+if db is None:
+    db = {}
 
 #with st.form("Authentication"):
 key_file = st.file_uploader("key", type=None, accept_multiple_files=False, key=None, help=None, on_change=None, args=None, kwargs=None,
@@ -29,6 +30,7 @@ if button:
         call = caller.API_call(source, key_file, pswd)
         st.write("Call", call)
         db[f"call-{len(db)+1}"] = call
+        print("Call", call)
     except Exception as e:
         db[f"call-{len(db) + 1}"] = (str(e), source)
 st.write()

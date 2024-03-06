@@ -32,5 +32,9 @@ if button:
         db[f"call-{len(db)+1}"] = call
         print("Call", call)
     except Exception as e:
-        db[f"call-{len(db) + 1}"] = (str(e), source)
+        call = (str(e), source)
+        st.write("Call-error", call)
+        db[f"call-{len(db) + 1}"] = call
+        print("Call-error", call)
+    st.write("Number of requests in the database:", len(db))
 st.write()

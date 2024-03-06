@@ -67,7 +67,97 @@
     &lt;/comunicacion&gt;
   &lt;/solicitud&gt;
 &lt;/alt:peticion&gt;]]&gt;
-</ns0:solicitud>
+    </ns0:solicitud>
+        <aplicacion>Cloudbeds integration</aplicacion>
+        <codigoArrendador>B20805578</codigoArrendador>
+        <tipoComunicacion>PV</tipoComunicacion>
+      </ns0:cabecera>
+      <ns0:solicitud>&lt;![CDATA[&lt;alt:peticion xmlns:alt="http://www.servicios.ertzaintza.eus/Ertzaintza/ALOJADOS/A19/comunicacionPV"&gt;
+&lt;solicitud&gt;
+  &lt;codigoEstablecimiento&gt;C1123&lt;/codigoEstablecimiento&gt;
+  &lt;comunicacion&gt;
+    &lt;establecimiento&gt;
+      &lt;codigoEstablecimiento&gt;C1123&lt;/codigoEstablecimiento&gt;
+      &lt;datosEstablecimiento&gt;
+        &lt;tipo&gt;albergue&lt;/tipo&gt;
+        &lt;nombre&gt;BLAI BLAI ATERPETXEA BSS00029&lt;/nombre&gt;
+        &lt;direccion&gt;
+          &lt;direccion&gt;NAFARROA CALLE 37 A&lt;/direccion&gt;
+          &lt;direccion2&gt;BA&lt;/direccion2&gt;
+          &lt;localidad&gt;Zarautz&lt;/localidad&gt;
+          &lt;provincia&gt;Gipuzkoa&lt;/provincia&gt;
+          &lt;codigoPostal&gt;48901&lt;/codigoPostal&gt;
+          &lt;pais&gt;ESP&lt;/pais&gt;
+        &lt;/direccion&gt;
+      &lt;/datosEstablecimiento&gt;
+    &lt;/establecimiento&gt;
+    &lt;contrato&gt;
+      &lt;referencia&gt;B20805578-1&lt;/referencia&gt;
+      &lt;fechaContrato&gt;2022-09-29&lt;/fechaContrato&gt;
+      &lt;fechaEntrada&gt;2022-09-19T01:18:33&lt;/fechaEntrada&gt;
+      &lt;fechaSalida&gt;2022-09-21T19:27:14+02:00&lt;/fechaSalida&gt;
+      &lt;numPersonas&gt;2&lt;/numPersonas&gt;
+      &lt;numHabitaciones&gt;1&lt;/numHabitaciones&gt;
+      &lt;internet&gt;true&lt;/internet&gt;
+      &lt;pago&gt;
+        &lt;tipoPago&gt;EFECT&lt;/tipoPago&gt;
+        &lt;fechaPago&gt;2022-09-29&lt;/fechaPago&gt;
+      &lt;/pago&gt;
+    &lt;/contrato&gt;
+    &lt;persona&gt;
+      &lt;item&gt;
+        &lt;rol&gt;TI&lt;/rol&gt;
+        &lt;nombre&gt;Juan&lt;/nombre&gt;
+        &lt;apellido1&gt;Perez&lt;/apellido1&gt;
+        &lt;apellido2&gt;Gomez&lt;/apellido2&gt;
+        &lt;tipoDocumento&gt;DNI&lt;/tipoDocumento&gt;
+        &lt;numeroDocumento&gt;12345678&lt;/numeroDocumento&gt;
+        &lt;soporteDocumento&gt;DNI&lt;/soporteDocumento&gt;
+        &lt;fechaNacimiento&gt;1956-05-02&lt;/fechaNacimiento&gt;
+        &lt;nacionalidad&gt;ES&lt;/nacionalidad&gt;
+        &lt;sexo&gt;H&lt;/sexo&gt;
+        &lt;direccion&gt;
+          &lt;direccion&gt;Paseo de las Camelias 456&lt;/direccion&gt;
+          &lt;direccion2&gt;Retorno de los Laureles&lt;/direccion2&gt;
+          &lt;localidad&gt;Zaragoza&lt;/localidad&gt;
+          &lt;provincia&gt;Zaragoza&lt;/provincia&gt;
+          &lt;codigoPostal&gt;50012&lt;/codigoPostal&gt;
+          &lt;pais&gt;ES&lt;/pais&gt;
+        &lt;/direccion&gt;
+        &lt;telefono&gt;777777777&lt;/telefono&gt;
+        &lt;telefono2&gt;777777777&lt;/telefono2&gt;
+        &lt;correo&gt;person1@example.com&lt;/correo&gt;
+        &lt;parentesco/&gt;
+      &lt;/item&gt;
+      &lt;item&gt;
+        &lt;rol&gt;VI&lt;/rol&gt;
+        &lt;nombre&gt;Eliseo&lt;/nombre&gt;
+        &lt;apellido1&gt;Perez&lt;/apellido1&gt;
+        &lt;apellido2&gt;Campa&lt;/apellido2&gt;
+        &lt;tipoDocumento&gt;DNI&lt;/tipoDocumento&gt;
+        &lt;numeroDocumento&gt;12345679&lt;/numeroDocumento&gt;
+        &lt;soporteDocumento&gt;DNI&lt;/soporteDocumento&gt;
+        &lt;fechaNacimiento&gt;1986-02-09&lt;/fechaNacimiento&gt;
+        &lt;nacionalidad&gt;ES&lt;/nacionalidad&gt;
+        &lt;sexo&gt;H&lt;/sexo&gt;
+        &lt;direccion&gt;
+          &lt;direccion&gt;Paseo de las Camelias 456&lt;/direccion&gt;
+          &lt;direccion2&gt;Retorno de los Laureles&lt;/direccion2&gt;
+          &lt;localidad&gt;Zaragoza&lt;/localidad&gt;
+          &lt;provincia&gt;Zaragoza&lt;/provincia&gt;
+          &lt;codigoPostal&gt;50012&lt;/codigoPostal&gt;
+          &lt;pais&gt;ES&lt;/pais&gt;
+        &lt;/direccion&gt;
+        &lt;telefono&gt;777777777&lt;/telefono&gt;
+        &lt;telefono2&gt;777777777&lt;/telefono2&gt;
+        &lt;correo&gt;person2@example.com&lt;/correo&gt;
+        &lt;parentesco&gt;12&lt;/parentesco&gt;
+      &lt;/item&gt;
+    &lt;/persona&gt;
+  &lt;/comunicacion&gt;
+&lt;/solicitud&gt;
+
+&lt;/alt:peticion&gt;]]&gt;</ns0:solicitud>
     </ns0:envioFicheroXML>
   </soap-env:Body>
 </soap-env:Envelope>

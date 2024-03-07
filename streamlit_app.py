@@ -1,10 +1,14 @@
-from requests import get
+import caller
 import streamlit as st
-import datetime
-import caller, xmlsec
 from replit import db
 if db is None:
     db = {}
+
+def do_API_call(source, key_file, pswd):
+    try:
+        return caller.API_call(source, key_file, pswd)
+    except Exception as e:
+        return (str(e), source)
 
 #with st.form("Authentication"):
 key_file = st.file_uploader("key", type=None, accept_multiple_files=False, key=None, help=None, on_change=None, args=None, kwargs=None,
@@ -25,16 +29,19 @@ if button:
     if xmlta:
         source = xmlta
     else:
-        source = xmlfp
-    try:
-        call = caller.API_call(source, key_file, pswd)
-        st.write("Call", call)
-        db[f"call-{len(db)+1}"] = call
-        print("Call", call)
-    except Exception as e:
-        call = (str(e), source)
-        st.write("Call-error", call)
-        db[f"call-{len(db) + 1}"] = call
-        print("Call-error", call)
+        source = xmlfp.read()
+    if key_file is None:
+        key = None
+    else:
+        key = key_file.read()
+    #assert 0, (pswd,)
+    to_save = (source, key, pswd)
+    #call = do_API_call(source, key_file, pswd)
+    #to_save = (source, key, pswd, call)
+    st.write("Saving data", to_save)
+    db_index = f"call-{len(db)+1}"
+    db[db_index] = to_save
+    print("Saving data", to_save)
     st.write("Number of requests in the database:", len(db))
+    st.write("Retrieving data", db[db_index])
 st.write()

@@ -12,3 +12,7 @@ run = ["venv/bin/python", "-mstreamlit", "run", "--server.address", "0.0.0.0", "
 ignorePorts = false
 deploymentTarget = "gce"
 build = ["sh", "-c", "python -mvenv venv; source venv/bin/activate; poetry install"]
+
+[[ports]]
+localPort = 8501
+externalPort = 80

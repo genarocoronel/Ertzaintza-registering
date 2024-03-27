@@ -31,6 +31,7 @@ def restore_values():
 
 
 if __name__ == "__main__":
+    """
     valuesdict = restore_values()
     stag = set()
     for (key, value) in valuesdict.items():
@@ -38,3 +39,14 @@ if __name__ == "__main__":
         stag.add(tgk)
     print(len(valuesdict), len(stag))
     save_distinct_values(stag)
+    """
+    valueslists = json.load(open("outputs/distinct_values_curated.json"))
+    distinct_strings = set()
+    for valueslist in valueslists:
+        distinct_strings.update(valueslist)
+    sdict = sorted(distinct_strings)
+    with open("outputs/distinct_strings.txt", "w") as f:
+        for s in sdict:
+            f.write(s)
+            f.write("\n")
+    pass

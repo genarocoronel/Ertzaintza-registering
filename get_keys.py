@@ -1,6 +1,6 @@
 DB_URL="https://kv.replit.com/v0/eyJhbGciOiJIUzUxMiIsImlzcyI6ImNvbm1hbiIsImtpZCI6InByb2Q6MSIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjb25tYW4iLCJleHAiOjE3MTE2MTE1MTUsImlhdCI6MTcxMTQ5OTkxNSwiZGF0YWJhc2VfaWQiOiJjOGQ5M2FiNC1mMGUxLTQwMTktOTVhMS00ZDZiNDUxZGMyMjAiLCJ1c2VyIjoiR2VuYXJvQ29yb25lbCIsInNsdWciOiJFcnR6YWludHphLXJlZ2lzdGVyaW5nIn0.CUKCkN5wZBS0B_71Ed-vZeefl-bRVSK0lgV_coOZQ5PcjIofXNmT_HOsrf1qQv--izSB4Owu6RT0mUyu7S5W0g"
 import requests
-import json
+import json, base64
 
 def get_keys():
     rg = requests.get(DB_URL+"?prefix=")
@@ -29,6 +29,16 @@ def restore_values():
     valuesdict = json.load(open("outputs/valuesdict.json"))
     return valuesdict
 
+def decode_string(string):
+    senc = string.encode("utf-8")
+    decoded =  base64.b64decode(senc)
+    try:
+        ddecoded = decoded.decode("utf-8")
+    except UnicodeDecodeError:
+        return ("xml", decoded)
+    else:
+        return ("key", ddecoded)
+
 
 if __name__ == "__main__":
     """
@@ -45,8 +55,8 @@ if __name__ == "__main__":
     for valueslist in valueslists:
         distinct_strings.update(valueslist)
     sdict = sorted(distinct_strings)
-    with open("outputs/distinct_strings.txt", "w") as f:
-        for s in sdict:
-            f.write(s)
-            f.write("\n")
+    with open("outputs/b64s.txt", "r") as f:
+        for ec in f:
+            dc = decode_string(ec.rstrip())
+            print("dc", dc)
     pass
